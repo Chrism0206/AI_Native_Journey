@@ -1,0 +1,233 @@
+/* Custom styles to complement Tailwind CSS */
+
+/* Smooth transitions for all interactive elements */
+* {
+    transition: all 0.2s ease-in-out;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #5b371b;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #4a2e15;
+}
+
+/* Loading animation */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-spin {
+    animation: spin 1s linear infinite;
+}
+
+/* Fade in animation for results */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* Modal animations */
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Modal backdrop */
+#recommendationsModal {
+    animation: modalFadeIn 0.3s ease-out;
+    backdrop-filter: blur(4px);
+}
+
+#recommendationsModal > div {
+    animation: modalSlideIn 0.3s ease-out;
+}
+
+/* Custom focus styles for form elements */
+select:focus,
+input:focus {
+    outline: none;
+    border-color: #5b371b !important;
+    box-shadow: 0 0 0 3px rgba(91, 55, 27, 0.1);
+}
+
+/* Hover effects for flavor options */
+.flavor-option:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(91, 55, 27, 0.1);
+}
+
+/* Selected flavor option styles */
+.flavor-option input[type="checkbox"]:checked + span {
+    color: #5b371b;
+    font-weight: 600;
+}
+
+/* Button hover effects */
+button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Coffee card hover effects */
+.coffee-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Modal coffee card hover effects */
+#modalResultsContainer > div:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .px-40 {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .grid-cols-2 {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Modal responsive adjustments */
+    #recommendationsModal > div {
+        margin: 1rem;
+        max-width: calc(100vw - 2rem);
+    }
+    
+    #modalResultsContainer > div {
+        flex-direction: column;
+    }
+    
+    #modalResultsContainer > div > div:last-child {
+        aspect-ratio: 16/9;
+        width: 100%;
+    }
+}
+
+/* Custom checkbox styling */
+input[type="checkbox"] {
+    accent-color: #5b371b;
+}
+
+/* Ensure proper font loading */
+body {
+    font-family: 'Manrope', 'Noto Sans', sans-serif;
+}
+
+/* Smooth scrolling for the entire page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Loading spinner custom styling */
+.loading-spinner svg {
+    color: #5b371b;
+}
+
+/* Results container spacing */
+#resultsContainer {
+    gap: 1.5rem;
+}
+
+/* Modal results container spacing */
+#modalResultsContainer {
+    gap: 1rem;
+}
+
+/* Form validation styles */
+select:invalid,
+input:invalid {
+    border-color: #e53e3e;
+}
+
+/* Success state for form elements */
+select:valid,
+input:valid {
+    border-color: #38a169;
+}
+
+/* Disabled state styling */
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+/* Focus visible for accessibility */
+button:focus-visible,
+a:focus-visible {
+    outline: 2px solid #5b371b;
+    outline-offset: 2px;
+}
+
+/* Modal close button hover effect */
+#closeModalBtn:hover {
+    transform: scale(1.1);
+}
+
+/* Prevent body scroll when modal is open */
+body.modal-open {
+    overflow: hidden;
+}
+
+/* Print styles */
+@media print {
+    .hidden {
+        display: none !important;
+    }
+    
+    body {
+        background: white !important;
+        color: black !important;
+    }
+    
+    #recommendationsModal {
+        display: none !important;
+    }
+} 
