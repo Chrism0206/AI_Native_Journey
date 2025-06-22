@@ -7,27 +7,62 @@
     <!-- Tailwind CSS CDN for basic styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Apply Inter font and basic styling to the body */
+        /* Apply Inter font and colorful styling to the body */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f0f4f8; /* Light gray background */
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #4facfe 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh; /* Ensure it takes full viewport height */
+            min-height: 100vh;
             margin: 0;
-            padding: 20px; /* Add some padding for small screens */
-            box-sizing: border-box; /* Include padding in element's total width and height */
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .title-gradient {
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57);
+            background-size: 300% 300%;
+            animation: titleGlow 3s ease-in-out infinite;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        @keyframes titleGlow {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .text-highlight {
+            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+            padding: 2px 6px;
+            border-radius: 4px;
         }
     </style>
 </head>
-<body class="flex items-center justify-center min-h-screen bg-gray-100 p-4">
-    <div class="text-center bg-white p-8 rounded-lg shadow-xl max-w-lg w-full">
-        <h1 class="text-4xl font-bold text-gray-800 mb-4 rounded-md">My AI journey begins</h1>
-        <p class="text-lg text-gray-600">
-            Welcome, everyone, to the start of an exciting exploration into Artificial Intelligence!
-            This page documents the initial steps and discoveries that I, Christian, am making as I begin my pivot into the tech space,
-            immersing myself in this fascinating field. Join me on this incredible learning journey!
+<body class="flex items-center justify-center min-h-screen p-4">
+    <div class="text-center card p-8 rounded-2xl max-w-lg w-full">
+        <h1 class="text-4xl font-bold mb-4 title-gradient">My AI journey begins</h1>
+        <p class="text-lg text-gray-700 leading-relaxed">
+            Welcome, everyone, to the start of an exciting exploration into <span class="text-highlight">Artificial Intelligence</span>!
+            This page documents the initial steps and discoveries that I, <span class="text-highlight">Christian</span>, am making as I begin my pivot into the tech space,
+            immersing myself in this <span class="text-highlight">fascinating field</span>. Join me on this incredible learning journey!
         </p>
     </div>
 </body>
