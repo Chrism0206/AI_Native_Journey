@@ -155,5 +155,70 @@ export const coffeeDatabase = [
         detailedDescription: "Grown in the highlands of Chiapas, Mexico, this coffee is known for its large beans and rich flavor. It has a full body and low acidity, with a profile dominated by deep chocolate and nutty flavors. A pleasant earthy undertone adds complexity, resulting in a well-rounded and satisfying cup. It's a great choice for those who enjoy a rich but smooth coffee experience.",
         rating: 4.1,
         image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAwMn5B2Iqf65mRknqg9JXtn5Nb-dDP5nqQOsPuJSlnTdBNUijzVJb8gVLNR1TXnnuoFiTN-kW22VGK88W9onRAjm5vtYvt7ukK6-7UDgrGVArCCcrMZSHOK4uFaa-jx129e1vk2d6P0FUmNBsNmvxkuZUH3azLKHweP1eLmx0QkSzEy1rw2LzxTQ3IAZCJrAHUYFEMCF5JoIixeOtNOp8ZAkPn8ZlvFlZLKz8RuOC6r2uTyJ_bDKal7d4_6cVDX4uJihIUa3gQMow"
+    },
+    {
+        id: "tanzanian-peaberry",
+        name: "Tanzanian Peaberry",
+        origin: "Tanzania",
+        roastLevel: "medium",
+        flavors: ["fruity", "chocolate", "spicy"],
+        acidity: "high",
+        body: "medium",
+        description: "A rare peaberry coffee with bright fruit notes, rich chocolate undertones, and a distinctive spicy finish.",
+        detailedDescription: "Tanzanian Peaberry is a rare and special coffee, representing only about 5% of the crop. Peaberry beans are single, round beans instead of the usual flat-sided pairs, resulting in a more concentrated flavor. It features bright, wine-like acidity with notes of tropical fruit, dark chocolate, and a hint of black pepper spice. The medium body and complex profile make it a truly unique coffee experience.",
+        rating: 4.6,
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuATb2XZqaCzBdZYzddT0Wn9qvJzyScjrmamX4AhUbtnPpd3lq9pYhxEtBwwdC98QAKC3SvGErncbYN8ukk16ilwv3YSlTxC5QO2zi4W4W2u8NXAwIZP7vjHnBBvShYo-zffLpHPfsmWiEXf1F6Odp6bArjW5UZZJWgqql4v_e3MlCJKqdxAz30pFsI3KsaEceh1yIjeY8EoF9TJuGx_BrU_aSaXkfQjuQRzfK6B-i4YVSpiAZdjSW9BKe0I5Wx9NzYaSGbTKyYuGaM"
+    },
+    {
+        id: "ugandan-bugisu",
+        name: "Ugandan Bugisu",
+        origin: "Uganda",
+        roastLevel: "medium-dark",
+        flavors: ["fruity", "earthy", "chocolate"],
+        acidity: "medium",
+        body: "full",
+        description: "A full-bodied coffee with complex fruit notes, earthy undertones, and rich chocolate flavors.",
+        detailedDescription: "Ugandan Bugisu coffee is grown on the slopes of Mount Elgon and is known for its unique combination of African and Central American characteristics. It has a full body with medium acidity and a complex flavor profile featuring notes of red fruit, dark chocolate, and a distinctive earthy quality. The finish is smooth and lingering, making it a sophisticated and memorable coffee.",
+        rating: 4.3,
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuB-MGGI9tENcxedPjSbrZwfxS4hnODLieEn42JJxV9dcVZry1HAFvZpl6Z-bn9bAFIp9I2mNDw1trpf3gJfZzUl_ICZSXeN4ghKCHJ8Q1kMc-NZ7xz98UXHrcooNfKlJtHgPv7A68kVaHbmnsu1NmzK0Xa2ePnMfPHeF-WiYSEd8BafBuRUIh23ZcBM4UAPA8WDSclOSoSLP8PE4AxGk7_dw8WKdKpO-UmFfIy-S0W989YP0a8Row8y8cM1MN_62EY4mlF_E3LTnxA"
+    },
+    {
+        id: "rwandan-bourbon",
+        name: "Rwandan Bourbon",
+        origin: "Rwanda",
+        roastLevel: "medium",
+        flavors: ["fruity", "floral", "chocolate"],
+        acidity: "high",
+        body: "medium",
+        description: "A bright, complex coffee with vibrant fruit notes, delicate floral aromas, and smooth chocolate undertones.",
+        detailedDescription: "Rwandan Bourbon coffee is celebrated for its bright, clean profile and complex flavor development. It features high acidity with notes of red berries, citrus, and delicate floral aromas like jasmine. The medium body and smooth chocolate undertones create a well-balanced and sophisticated cup. This coffee represents the best of East African coffee traditions with its bright, wine-like character.",
+        rating: 4.5,
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAwMn5B2Iqf65mRknqg9JXtn5Nb-dDP5nqQOsPuJSlnTdBNUijzVJb8gVLNR1TXnnuoFiTN-kW22VGK88W9onRAjm5vtYvt7ukK6-7UDgrGVArCCcrMZSHOK4uFaa-jx129e1vk2d6P0FUmNBsNmvxkuZUH3azLKHweP1eLmx0QkSzEy1rw2LzxTQ3IAZCJrAHUYFEMCF5JoIixeOtNOp8ZAkPn8ZlvFlZLKz8RuOC6r2uTyJ_bDKal7d4_6cVDX4uJihIUa3gQMow"
+    },
+    {
+        id: "burundi-kayanza",
+        name: "Burundi Kayanza",
+        origin: "Burundi",
+        roastLevel: "medium",
+        flavors: ["fruity", "citrus", "chocolate"],
+        acidity: "high",
+        body: "medium",
+        description: "A bright, clean coffee with intense citrus notes, vibrant fruit flavors, and smooth chocolate finish.",
+        detailedDescription: "Burundi Kayanza coffee is known for its exceptional brightness and clean, complex profile. It features high acidity with intense citrus notes, particularly grapefruit and lemon, along with vibrant red fruit flavors. The medium body and smooth chocolate finish create a well-structured and memorable cup. This coffee showcases the unique terroir of the Kayanza region with its volcanic soil and high elevation.",
+        rating: 4.4,
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuATb2XZqaCzBdZYzddT0Wn9qvJzyScjrmamX4AhUbtnPpd3lq9pYhxEtBwwdC98QAKC3SvGErncbYN8ukk16ilwv3YSlTxC5QO2zi4W4W2u8NXAwIZP7vjHnBBvShYo-zffLpHPfsmWiEXf1F6Odp6bArjW5UZZJWgqql4v_e3MlCJKqdxAz30pFsI3KsaEceh1yIjeY8EoF9TJuGx_BrU_aSaXkfQjuQRzfK6B-i4YVSpiAZdjSW9BKe0I5Wx9NzYaSGbTKyYuGaM"
+    },
+    {
+        id: "zambian-copperbelt",
+        name: "Zambian Copperbelt",
+        origin: "Zambia",
+        roastLevel: "medium-dark",
+        flavors: ["chocolate", "nutty", "earthy"],
+        acidity: "low",
+        body: "full",
+        description: "A full-bodied coffee with rich chocolate notes, smooth nuttiness, and earthy undertones with low acidity.",
+        detailedDescription: "Zambian Copperbelt coffee is a hidden gem from southern Africa, known for its smooth and mellow character. It has a full body with low acidity, making it incredibly approachable. The flavor profile is dominated by rich chocolate notes, smooth nuttiness, and pleasant earthy undertones. It's a comforting and satisfying coffee that's perfect for those who prefer a less acidic, full-flavored experience.",
+        rating: 4.2,
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuB-MGGI9tENcxedPjSbrZwfxS4hnODLieEn42JJxV9dcVZry1HAFvZpl6Z-bn9bAFIp9I2mNDw1trpf3gJfZzUl_ICZSXeN4ghKCHJ8Q1kMc-NZ7xz98UXHrcooNfKlJtHgPv7A68kVaHbmnsu1NmzK0Xa2ePnMfPHeF-WiYSEd8BafBuRUIh23ZcBM4UAPA8WDSclOSoSLP8PE4AxGk7_dw8WKdKpO-UmFfIy-S0W989YP0a8Row8y8cM1MN_62EY4mlF_E3LTnxA"
     }
 ]; 

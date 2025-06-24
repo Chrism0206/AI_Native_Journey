@@ -87,7 +87,7 @@ function renderCoffeeDetails(coffee) {
                 </ul>
                 <div class="flex gap-4 mt-4">
                     <button id="prevBtn" class="px-5 py-2 rounded-full bg-[#f1ede9] text-[#191410] font-medium hover:bg-[#e8e0d8] transition-colors">← Previous</button>
-                    <a href="index.html" class="px-5 py-2 rounded-full bg-[#f1ede9] text-[#191410] font-medium hover:bg-[#e8e0d8] transition-colors">Back to Recommendations</a>
+                    <a href="index.html" class="px-5 py-2 rounded-full bg-[#f1ede9] text-[#191410] font-medium text-lg hover:bg-[#e8e0d8] transition-colors">Back to Recommendations</a>
                     <button id="nextBtn" class="px-5 py-2 rounded-full bg-[#f1ede9] text-[#191410] font-medium hover:bg-[#e8e0d8] transition-colors">Next →</button>
                 </div>
             </div>

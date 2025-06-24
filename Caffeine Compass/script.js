@@ -1,138 +1,98 @@
-// Coffee Database - Comprehensive list of coffee beans with their characteristics
-const coffeeDatabase = [
-    {
-        name: "Ethiopian Yirgacheffe",
-        origin: "Ethiopia",
-        roastLevel: "light",
-        flavors: ["fruity", "floral", "citrus"],
-        acidity: "high",
-        body: "light",
-        description: "A bright, complex coffee with distinctive floral and citrus notes. Known for its wine-like acidity and tea-like body.",
-        rating: 4.8,
-        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuATb2XZqaCzBdZYzddT0Wn9qvJzyScjrmamX4AhUbtnPpd3lq9pYhxEtBwwdC98QAKC3SvGErncbYN8ukk16ilwv3YSlTxC5QO2zi4W4W2u8NXAwIZP7vjHnBBvShYo-zffLpHPfsmWiEXf1F6Odp6bArjW5UZZJWgqql4v_e3MlCJKqdxAz30pFsI3KsaEceh1yIjeY8EoF9TJuGx_BrU_aSaXkfQjuQRzfK6B-i4YVSpiAZdjSW9BKe0I5Wx9NzYaSGbTKyYuGaM"
-    },
-    {
-        name: "Colombian Supremo",
-        origin: "Colombia",
-        roastLevel: "medium",
-        flavors: ["chocolate", "nutty", "caramel"],
-        acidity: "medium",
-        body: "medium",
-        description: "A well-balanced coffee with smooth chocolate notes, subtle nuttiness, and a hint of caramel sweetness.",
-        rating: 4.6,
-        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuB-MGGI9tENcxedPjSbrZwfxS4hnODLieEn42JJxV9dcVZry1HAFvZpl6Z-bn9bAFIp9I2mNDw1trpf3gJfZzUl_ICZSXeN4ghKCHJ8Q1kMc-NZ7xz98UXHrcooNfKlJtHgPv7A68kVaHbmnsu1NmzK0Xa2ePnMfPHeF-WiYSEd8BafBuRUIh23ZcBM4UAPA8WDSclOSoSLP8PE4AxGk7_dw8WKdKpO-UmFfIy-S0W989YP0a8Row8y8cM1MN_62EY4mlF_E3LTnxA"
-    },
-    {
-        name: "Brazilian Santos",
-        origin: "Brazil",
-        roastLevel: "medium-dark",
-        flavors: ["nutty", "chocolate", "earthy"],
-        acidity: "low",
-        body: "full",
-        description: "A smooth, low-acid coffee with rich nutty flavors and a full body. Perfect for those who prefer milder acidity.",
-        rating: 4.4,
-        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAwMn5B2Iqf65mRknqg9JXtn5Nb-dDP5nqQOsPuJSlnTdBNUijzVJb8gVLNR1TXnnuoFiTN-kW22VGK88W9onRAjm5vtYvt7ukK6-7UDgrGVArCCcrMZSHOK4uFaa-jx129e1vk2d6P0FUmNBsNmvxkuZUH3azLKHweP1eLmx0QkSzEy1rw2LzxTQ3IAZCJrAHUYFEMCF5JoIixeOtNOp8ZAkPn8ZlvFlZLKz8RuOC6r2uTyJ_bDKal7d4_6cVDX4uJihIUa3gQMow"
-    },
-    {
-        name: "Guatemalan Antigua",
-        origin: "Guatemala",
-        roastLevel: "medium",
-        flavors: ["chocolate", "spicy", "earthy"],
-        acidity: "medium",
-        body: "full",
-        description: "A full-bodied coffee with rich chocolate notes, subtle spice, and a smooth finish with medium acidity.",
-        rating: 4.7,
-        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuATb2XZqaCzBdZYzddT0Wn9qvJzyScjrmamX4AhUbtnPpd3lq9pYhxEtBwwdC98QAKC3SvGErncbYN8ukk16ilwv3YSlTxC5QO2zi4W4W2u8NXAwIZP7vjHnBBvShYo-zffLpHPfsmWiEXf1F6Odp6bArjW5UZZJWgqql4v_e3MlCJKqdxAz30pFsI3KsaEceh1yIjeY8EoF9TJuGx_BrU_aSaXkfQjuQRzfK6B-i4YVSpiAZdjSW9BKe0I5Wx9NzYaSGbTKyYuGaM"
-    },
-    {
-        name: "Costa Rican Tarrazu",
-        origin: "Costa Rica",
-        roastLevel: "medium",
-        flavors: ["fruity", "chocolate", "citrus"],
-        acidity: "high",
-        body: "medium",
-        description: "A bright, clean coffee with vibrant fruit notes, balanced chocolate undertones, and crisp citrus acidity.",
-        rating: 4.5,
-        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuB-MGGI9tENcxedPjSbrZwfxS4hnODLieEn42JJxV9dcVZry1HAFvZpl6Z-bn9bAFIp9I2mNDw1trpf3gJfZzUl_ICZSXeN4ghKCHJ8Q1kMc-NZ7xz98UXHrcooNfKlJtHgPv7A68kVaHbmnsu1NmzK0Xa2ePnMfPHeF-WiYSEd8BafBuRUIh23ZcBM4UAPA8WDSclOSoSLP8PE4AxGk7_dw8WKdKpO-UmFfIy-S0W989YP0a8Row8y8cM1MN_62EY4mlF_E3LTnxA"
-    },
-    {
-        name: "Kenyan AA",
-        origin: "Kenya",
-        roastLevel: "medium",
-        flavors: ["fruity", "citrus", "spicy"],
-        acidity: "high",
-        body: "medium",
-        description: "A bold, bright coffee with intense berry flavors, zesty citrus notes, and a distinctive spicy finish.",
-        rating: 4.8,
-        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAwMn5B2Iqf65mRknqg9JXtn5Nb-dDP5nqQOsPuJSlnTdBNUijzVJb8gVLNR1TXnnuoFiTN-kW22VGK88W9onRAjm5vtYvt7ukK6-7UDgrGVArCCcrMZSHOK4uFaa-jx129e1vk2d6P0FUmNBsNmvxkuZUH3azLKHweP1eLmx0QkSzEy1rw2LzxTQ3IAZCJrAHUYFEMCF5JoIixeOtNOp8ZAkPn8ZlvFlZLKz8RuOC6r2uTyJ_bDKal7d4_6cVDX4uJihIUa3gQMow"
-    },
-    {
-        name: "Sumatra Mandheling",
-        origin: "Sumatra",
-        roastLevel: "dark",
-        flavors: ["earthy", "spicy", "chocolate"],
-        acidity: "low",
-        body: "full",
-        description: "A full-bodied, low-acid coffee with deep earthy notes, rich chocolate undertones, and a spicy complexity.",
-        rating: 4.3,
-        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuATb2XZqaCzBdZYzddT0Wn9qvJzyScjrmamX4AhUbtnPpd3lq9pYhxEtBwwdC98QAKC3SvGErncbYN8ukk16ilwv3YSlTxC5QO2zi4W4W2u8NXAwIZP7vjHnBBvShYo-zffLpHPfsmWiEXf1F6Odp6bArjW5UZZJWgqql4v_e3MlCJKqdxAz30pFsI3KsaEceh1yIjeY8EoF9TJuGx_BrU_aSaXkfQjuQRzfK6B-i4YVSpiAZdjSW9BKe0I5Wx9NzYaSGbTKyYuGaM"
-    },
-    {
-        name: "Jamaican Blue Mountain",
-        origin: "Jamaica",
-        roastLevel: "medium",
-        flavors: ["chocolate", "nutty", "floral"],
-        acidity: "medium",
-        body: "medium",
-        description: "A smooth, mild coffee with balanced chocolate and nutty flavors, subtle floral notes, and a clean finish.",
-        rating: 4.9,
-        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuB-MGGI9tENcxedPjSbrZwfxS4hnODLieEn42JJxV9dcVZry1HAFvZpl6Z-bn9bAFIp9I2mNDw1trpf3gJfZzUl_ICZSXeN4ghKCHJ8Q1kMc-NZ7xz98UXHrcooNfKlJtHgPv7A68kVaHbmnsu1NmzK0Xa2ePnMfPHeF-WiYSEd8BafBuRUIh23ZcBM4UAPA8WDSclOSoSLP8PE4AxGk7_dw8WKdKpO-UmFfIy-S0W989YP0a8Row8y8cM1MN_62EY4mlF_E3LTnxA"
-    },
-    {
-        name: "Peruvian Organic",
-        origin: "Peru",
-        roastLevel: "medium",
-        flavors: ["nutty", "chocolate", "caramel"],
-        acidity: "medium",
-        body: "medium",
-        description: "A well-rounded organic coffee with smooth nutty flavors, rich chocolate notes, and a hint of caramel sweetness.",
-        rating: 4.4,
-        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAwMn5B2Iqf65mRknqg9JXtn5Nb-dDP5nqQOsPuJSlnTdBNUijzVJb8gVLNR1TXnnuoFiTN-kW22VGK88W9onRAjm5vtYvt7ukK6-7UDgrGVArCCcrMZSHOK4uFaa-jx129e1vk2d6P0FUmNBsNmvxkuZUH3azLKHweP1eLmx0QkSzEy1rw2LzxTQ3IAZCJrAHUYFEMCF5JoIixeOtNOp8ZAkPn8ZlvFlZLKz8RuOC6r2uTyJ_bDKal7d4_6cVDX4uJihIUa3gQMow"
-    },
-    {
-        name: "Honduran Marcala",
-        origin: "Honduras",
-        roastLevel: "medium-dark",
-        flavors: ["chocolate", "caramel", "nutty"],
-        acidity: "low",
-        body: "full",
-        description: "A full-bodied coffee with rich chocolate and caramel notes, smooth nuttiness, and a low-acid profile.",
-        rating: 4.2,
-        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuATb2XZqaCzBdZYzddT0Wn9qvJzyScjrmamX4AhUbtnPpd3lq9pYhxEtBwwdC98QAKC3SvGErncbYN8ukk16ilwv3YSlTxC5QO2zi4W4W2u8NXAwIZP7vjHnBBvShYo-zffLpHPfsmWiEXf1F6Odp6bArjW5UZZJWgqql4v_e3MlCJKqdxAz30pFsI3KsaEceh1yIjeY8EoF9TJuGx_BrU_aSaXkfQjuQRzfK6B-i4YVSpiAZdjSW9BKe0I5Wx9NzYaSGbTKyYuGaM"
-    },
-    {
-        name: "Nicaraguan Jinotega",
-        origin: "Nicaragua",
-        roastLevel: "medium",
-        flavors: ["chocolate", "fruity", "caramel"],
-        acidity: "medium",
-        body: "medium",
-        description: "A balanced coffee with smooth chocolate notes, subtle fruit undertones, and a hint of caramel sweetness.",
-        rating: 4.3,
-        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuB-MGGI9tENcxedPjSbrZwfxS4hnODLieEn42JJxV9dcVZry1HAFvZpl6Z-bn9bAFIp9I2mNDw1trpf3gJfZzUl_ICZSXeN4ghKCHJ8Q1kMc-NZ7xz98UXHrcooNfKlJtHgPv7A68kVaHbmnsu1NmzK0Xa2ePnMfPHeF-WiYSEd8BafBuRUIh23ZcBM4UAPA8WDSclOSoSLP8PE4AxGk7_dw8WKdKpO-UmFfIy-S0W989YP0a8Row8y8cM1MN_62EY4mlF_E3LTnxA"
-    },
-    {
-        name: "Mexican Chiapas",
-        origin: "Mexico",
-        roastLevel: "medium-dark",
-        flavors: ["chocolate", "nutty", "earthy"],
-        acidity: "low",
-        body: "full",
-        description: "A full-bodied coffee with rich chocolate notes, smooth nuttiness, and earthy undertones with low acidity.",
-        rating: 4.1,
-        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAwMn5B2Iqf65mRknqg9JXtn5Nb-dDP5nqQOsPuJSlnTdBNUijzVJb8gVLNR1TXnnuoFiTN-kW22VGK88W9onRAjm5vtYvt7ukK6-7UDgrGVArCCcrMZSHOK4uFaa-jx129e1vk2d6P0FUmNBsNmvxkuZUH3azLKHweP1eLmx0QkSzEy1rw2LzxTQ3IAZCJrAHUYFEMCF5JoIixeOtNOp8ZAkPn8ZlvFlZLKz8RuOC6r2uTyJ_bDKal7d4_6cVDX4uJihIUa3gQMow"
+// Import the comprehensive coffee database
+import { coffeeDatabase } from './database.js';
+
+// Enhanced Coffee Database Utilities
+class CoffeeDatabaseManager {
+    constructor(database) {
+        this.database = database;
+        this.origins = this.getUniqueOrigins();
+        this.flavors = this.getUniqueFlavors();
+        this.roastLevels = this.getUniqueRoastLevels();
     }
-];
+
+    // Get all unique origins from the database
+    getUniqueOrigins() {
+        return [...new Set(this.database.map(coffee => coffee.origin))].sort();
+    }
+
+    // Get all unique flavors from the database
+    getUniqueFlavors() {
+        const allFlavors = this.database.flatMap(coffee => coffee.flavors);
+        return [...new Set(allFlavors)].sort();
+    }
+
+    // Get all unique roast levels from the database
+    getUniqueRoastLevels() {
+        return [...new Set(this.database.map(coffee => coffee.roastLevel))].sort();
+    }
+
+    // Search coffees by multiple criteria
+    searchCoffees(criteria = {}) {
+        return this.database.filter(coffee => {
+            // Origin filter
+            if (criteria.origin && coffee.origin !== criteria.origin) {
+                return false;
+            }
+            
+            // Roast level filter
+            if (criteria.roastLevel && coffee.roastLevel !== criteria.roastLevel) {
+                return false;
+            }
+            
+            // Flavor filter
+            if (criteria.flavors && criteria.flavors.length > 0) {
+                const hasMatchingFlavor = criteria.flavors.some(flavor => 
+                    coffee.flavors.includes(flavor)
+                );
+                if (!hasMatchingFlavor) return false;
+            }
+            
+            // Acidity filter
+            if (criteria.acidity && coffee.acidity !== criteria.acidity) {
+                return false;
+            }
+            
+            // Body filter
+            if (criteria.body && coffee.body !== criteria.body) {
+                return false;
+            }
+            
+            // Rating filter
+            if (criteria.minRating && coffee.rating < criteria.minRating) {
+                return false;
+            }
+            
+            return true;
+        });
+    }
+
+    // Get coffee by ID
+    getCoffeeById(id) {
+        return this.database.find(coffee => coffee.id === id);
+    }
+
+    // Get coffees by origin
+    getCoffeesByOrigin(origin) {
+        return this.database.filter(coffee => coffee.origin === origin);
+    }
+
+    // Get top rated coffees
+    getTopRatedCoffees(limit = 5) {
+        return this.database
+            .sort((a, b) => b.rating - a.rating)
+            .slice(0, limit);
+    }
+
+    // Get coffees with specific flavor profile
+    getCoffeesByFlavorProfile(flavorProfile) {
+        return this.database.filter(coffee => 
+            flavorProfile.every(flavor => coffee.flavors.includes(flavor))
+        );
+    }
+}
+
+// Initialize the database manager
+const coffeeManager = new CoffeeDatabaseManager(coffeeDatabase);
 
 // DOM Elements
 const heroSection = document.getElementById('heroSection');
@@ -205,14 +165,10 @@ function closeModal() {
 
 // Get sample recommendations for modal
 function getSampleRecommendations() {
-    // Return 3 sample recommendations
-    return [
-        coffeeDatabase[0], // Ethiopian Yirgacheffe
-        coffeeDatabase[1], // Colombian Supremo
-        coffeeDatabase[2]  // Brazilian Santos
-    ];
+    return coffeeManager.getTopRatedCoffees(3);
 }
 
+// Favorites management
 function getFavorites() {
     return JSON.parse(localStorage.getItem('favorites') || '[]');
 }
@@ -226,60 +182,79 @@ function isFavorite(id) {
 }
 
 function toggleFavorite(id) {
-    let favs = getFavorites();
-    if (favs.includes(id)) {
-        favs = favs.filter(f => f !== id);
+    const favorites = getFavorites();
+    const index = favorites.indexOf(id);
+    
+    if (index > -1) {
+        favorites.splice(index, 1);
         showToast('Removed from favorites');
     } else {
-        favs.push(id);
-        showToast('Added to favorites!');
+        favorites.push(id);
+        showToast('Added to favorites');
     }
-    setFavorites(favs);
-    // Re-render modal results to update favorite status
-    if (window.currentModalRecommendations) {
-        displayModalResults(window.currentModalRecommendations);
-    }
+    
+    setFavorites(favorites);
+    
+    // Update all favorite buttons
+    document.querySelectorAll(`[data-id="${id}"]`).forEach(btn => {
+        btn.textContent = isFavorite(id) ? '❤️' : '🤍';
+    });
 }
 
+// Toast notification
 function showToast(message) {
-    let toast = document.getElementById('toastNotification');
-    if (!toast) {
-        toast = document.createElement('div');
-        toast.id = 'toastNotification';
-        toast.className = 'fixed bottom-8 left-1/2 -translate-x-1/2 bg-[#5b371b] text-[#fbfaf9] px-6 py-3 rounded-full shadow-lg z-50 text-base font-semibold opacity-0 pointer-events-none transition-all';
-        document.body.appendChild(toast);
-    }
+    const toast = document.createElement('div');
+    toast.className = 'fixed top-4 right-4 bg-[#5b371b] text-[#fbfaf9] px-4 py-2 rounded-lg shadow-lg z-50 transform translate-x-full transition-transform duration-300';
     toast.textContent = message;
-    toast.classList.remove('opacity-0');
-    toast.classList.add('opacity-100');
+    document.body.appendChild(toast);
+    
     setTimeout(() => {
-        toast.classList.remove('opacity-100');
-        toast.classList.add('opacity-0');
-    }, 1800);
+        toast.classList.remove('translate-x-full');
+    }, 100);
+    
+    setTimeout(() => {
+        toast.classList.add('translate-x-full');
+        setTimeout(() => {
+            document.body.removeChild(toast);
+        }, 300);
+    }, 2000);
 }
 
+// Display modal results
 function displayModalResults(recommendations) {
-    window.currentModalRecommendations = recommendations;
     modalResultsContainer.innerHTML = '';
+    
     if (recommendations.length === 0) {
-        modalResultsContainer.innerHTML = `<div class='text-center text-[#8c6f5a]'>No coffees match your filter.</div>`;
+        modalResultsContainer.innerHTML = `
+            <div class="text-center py-8">
+                <p class="text-[#8c6f5a] text-lg">No recommendations found. Try adjusting your preferences!</p>
+            </div>
+        `;
         return;
     }
+    
     recommendations.forEach((coffee, index) => {
         const card = createModalCoffeeCard(coffee, index + 1);
         modalResultsContainer.appendChild(card);
     });
-    // Add event listeners for favorite buttons and flavor tags
-    document.querySelectorAll('.favorite-btn').forEach(btn => {
-        btn.onclick = () => toggleFavorite(btn.dataset.id);
+    
+    // Add event listeners for favorite buttons
+    modalResultsContainer.querySelectorAll('.favorite-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            toggleFavorite(this.dataset.id);
+        });
     });
-    document.querySelectorAll('.flavor-tag-btn').forEach(btn => {
-        btn.onclick = () => {
-            showToast(`Filtering by flavor: ${btn.dataset.flavor}`);
+    
+    // Add event listeners for flavor tag buttons
+    modalResultsContainer.querySelectorAll('.flavor-tag-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            // Add visual feedback
+            this.style.transform = 'scale(0.95)';
             setTimeout(() => {
+                this.style.transform = 'scale(1)';
                 filterModalByFlavor(btn.dataset.flavor);
             }, 900);
-        };
+        });
     });
 }
 
@@ -322,17 +297,13 @@ function createModalCoffeeCard(coffee, rank) {
 }
 
 function filterModalByFlavor(flavor) {
-    const filtered = coffeeDatabase.filter(c => c.flavors.includes(flavor));
+    const filtered = coffeeManager.searchCoffees({ flavors: [flavor] });
     displayModalResults(filtered);
 }
 
 // Form submission handler
 function handleFormSubmit(e) {
     e.preventDefault();
-    
-    // Show loading state
-    showLoading();
-    
     // Get form data
     const formData = new FormData(coffeeForm);
     const preferences = {
@@ -342,18 +313,10 @@ function handleFormSubmit(e) {
         body: formData.get('body'),
         origin: formData.get('origin')
     };
-    
-    // Show Recommendations link after first questionnaire
-    localStorage.setItem('showRecommendationsLink', 'true');
-    document.getElementById('recommendationsLink').classList.remove('hidden');
-    
-    // Simulate API delay for better UX
-    setTimeout(() => {
-        const recommendations = getRecommendations(preferences);
-        displayModalResults(recommendations);
-        showRecommendationsModal();
-        hideLoading();
-    }, 2000);
+    // Save preferences to localStorage
+    localStorage.setItem('userPreferences', JSON.stringify(preferences));
+    // Redirect to recommendations page
+    window.location.href = 'recommendations.html';
 }
 
 // Recommendation algorithm
