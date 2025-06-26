@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build Your Brew | Caffeine Compass</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+</head>
+<body class="bg-[#fbfaf9] min-h-screen flex flex-col items-center justify-start" style="font-family: Manrope, 'Noto Sans', sans-serif;">
+    <div class="relative flex size-full min-h-screen flex-col bg-[#fbfaf9] group/design-root overflow-x-hidden">
+      <div class="layout-container flex h-full grow flex-col">
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f1ede9] px-10 py-3">
+          <a href="index.html" class="flex items-center gap-4 text-[#191410]">
+            <img src="bean.png" alt="Caffeine Compass Logo" class="w-9 h-9 object-contain" />
+            <h2 class="text-[#191410] text-lg font-bold leading-tight tracking-[-0.015em]">Caffeine Compass</h2>
+          </a>
+          <div class="flex flex-1 justify-end gap-8">
+            <div class="flex items-center gap-9">
+              <a class="text-[#191410] text-sm font-medium leading-normal" href="index.html">Home</a>
+              <a class="text-[#191410] text-sm font-medium leading-normal" href="bean-index.html">Beans</a>
+              <a class="text-[#191410] text-sm font-medium leading-normal" href="#">Brewing Guides</a>
+            </div>
+            <a href="userprofile.html">
+              <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBxnVSxfNlCxBxLQ3NYy-_3vnXRHZgqjwq0624tyAcqzCHxlUQQGlF_GazseABcsqyggSu9A9_KEfcSYaSKNwnEtIrsceTqsLwkR4-wF5F25nm8RiPz6W0hBh4Dn0B7NQh74cugFPEMuULr0E40wDg5TYh6WfVqgSO-A85ASe_csY2eIB3LTjzraCbBYh1HQeCC6V5O0bNnjQ2ytRrqrQOL63BXaNbFOax874oCIP4udyshJRRiRF63auQG62sqCq_ANb5hJHbDyKM");'></div>
+            </a>
+          </div>
+        </header>
+        
+        <!-- Main Content Area -->
+        <div class="px-40 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            
+            <!-- Progress Bar -->
+            <div class="mb-8">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-sm font-medium text-[#8c6f5a]" id="progressText">Step 1 of 3</span>
+                <span class="text-sm font-medium text-[#5b371b]" id="progressPercent">33%</span>
+              </div>
+              <div class="w-full bg-[#f1ede9] rounded-full h-2">
+                <div class="bg-[#5b371b] h-2 rounded-full transition-all duration-300" id="progressBar" style="width: 33%"></div>
+              </div>
+            </div>
+
+            <!-- Step 1: Pick Your Flavor Vibe -->
+            <div id="step1" class="step-container">
+              <div class="text-center mb-8">
+                <h1 class="text-4xl font-bold text-[#191410] mb-4">Pick Your Flavor Vibe</h1>
+                <p class="text-lg text-[#8c6f5a]">What flavor do you crave?</p>
+              </div>
+              <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
+                <button class="flavor-option flex flex-col items-center p-6 rounded-xl border-2 border-[#f1ede9] hover:border-[#5b371b] hover:bg-[#fbfaf9] transition-all" data-flavor="fruity">
+                  <div class="text-3xl mb-2">🍓</div>
+                  <span class="text-[#191410] font-medium">Fruity</span>
+                </button>
+                <button class="flavor-option flex flex-col items-center p-6 rounded-xl border-2 border-[#f1ede9] hover:border-[#5b371b] hover:bg-[#fbfaf9] transition-all" data-flavor="chocolate">
+                  <div class="text-3xl mb-2">🍫</div>
+                  <span class="text-[#191410] font-medium">Chocolatey</span>
+                </button>
+                <button class="flavor-option flex flex-col items-center p-6 rounded-xl border-2 border-[#f1ede9] hover:border-[#5b371b] hover:bg-[#fbfaf9] transition-all" data-flavor="nutty">
+                  <div class="text-3xl mb-2">🥜</div>
+                  <span class="text-[#191410] font-medium">Nutty</span>
+                </button>
+                <button class="flavor-option flex flex-col items-center p-6 rounded-xl border-2 border-[#f1ede9] hover:border-[#5b371b] hover:bg-[#fbfaf9] transition-all" data-flavor="floral">
+                  <div class="text-3xl mb-2">🌸</div>
+                  <span class="text-[#191410] font-medium">Floral</span>
+                </button>
+                <button class="flavor-option flex flex-col items-center p-6 rounded-xl border-2 border-[#f1ede9] hover:border-[#5b371b] hover:bg-[#fbfaf9] transition-all" data-flavor="spicy">
+                  <div class="text-3xl mb-2">🌶️</div>
+                  <span class="text-[#191410] font-medium">Spicy</span>
+                </button>
+                <button class="flavor-option flex flex-col items-center p-6 rounded-xl border-2 border-[#f1ede9] hover:border-[#5b371b] hover:bg-[#fbfaf9] transition-all" data-flavor="caramel">
+                  <div class="text-3xl mb-2">🍯</div>
+                  <span class="text-[#191410] font-medium">Caramel</span>
+                </button>
+                <button class="flavor-option flex flex-col items-center p-6 rounded-xl border-2 border-[#f1ede9] hover:border-[#5b371b] hover:bg-[#fbfaf9] transition-all" data-flavor="earthy">
+                  <div class="text-3xl mb-2">🌿</div>
+                  <span class="text-[#191410] font-medium">Earthy</span>
+                </button>
+                <button class="flavor-option flex flex-col items-center p-6 rounded-xl border-2 border-[#f1ede9] hover:border-[#5b371b] hover:bg-[#fbfaf9] transition-all" data-flavor="citrus">
+                  <div class="text-3xl mb-2">🍋</div>
+                  <span class="text-[#191410] font-medium">Citrus</span>
+                </button>
+              </div>
+              <div class="text-center mt-8">
+                <button id="nextStep1" class="px-8 py-3 rounded-full bg-[#5b371b] text-[#fbfaf9] font-bold text-lg hover:bg-[#4a2e15] transition-colors disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+                  Next Step
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 2: Choose Your Coffee Feel -->
+            <div id="step2" class="step-container hidden">
+              <div class="text-center mb-8">
+                <h1 class="text-4xl font-bold text-[#191410] mb-4">Choose Your Coffee Feel</h1>
+                <p class="text-lg text-[#8c6f5a]">How do you like your coffee to feel?</p>
+              </div>
+              <div class="flex flex-col md:flex-row gap-6 max-w-2xl mx-auto">
+                <button class="feel-option flex flex-col items-center p-8 rounded-xl border-2 border-[#f1ede9] hover:border-[#5b371b] hover:bg-[#fbfaf9] transition-all flex-1" data-feel="light">
+                  <div class="text-4xl mb-4">☀️</div>
+                  <h3 class="text-xl font-bold text-[#191410] mb-2">Light & Refreshing</h3>
+                  <p class="text-[#8c6f5a] text-center">Bright, clean, and invigorating</p>
+                </button>
+                <button class="feel-option flex flex-col items-center p-8 rounded-xl border-2 border-[#f1ede9] hover:border-[#5b371b] hover:bg-[#fbfaf9] transition-all flex-1" data-feel="medium">
+                  <div class="text-4xl mb-4">⚖️</div>
+                  <h3 class="text-xl font-bold text-[#191410] mb-2">Balanced</h3>
+                  <p class="text-[#8c6f5a] text-center">Smooth, well-rounded, and approachable</p>
+                </button>
+                <button class="feel-option flex flex-col items-center p-8 rounded-xl border-2 border-[#f1ede9] hover:border-[#5b371b] hover:bg-[#fbfaf9] transition-all flex-1" data-feel="full">
+                  <div class="text-4xl mb-4">💪</div>
+                  <h3 class="text-xl font-bold text-[#191410] mb-2">Rich & Full</h3>
+                  <p class="text-[#8c6f5a] text-center">Bold, heavy-bodied, and satisfying</p>
+                </button>
+              </div>
+              <div class="text-center mt-8">
+                <button id="prevStep2" class="px-6 py-3 rounded-full bg-[#f1ede9] text-[#191410] font-medium mr-4 hover:bg-[#e8e0d8] transition-colors">
+                  Back
+                </button>
+                <button id="nextStep2" class="px-8 py-3 rounded-full bg-[#5b371b] text-[#fbfaf9] font-bold text-lg hover:bg-[#4a2e15] transition-colors disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+                  Next Step
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 3: Pick Your Adventure -->
+            <div id="step3" class="step-container hidden">
+              <div class="text-center mb-8">
+                <h1 class="text-4xl font-bold text-[#191410] mb-4">Pick Your Adventure</h1>
+                <p class="text-lg text-[#8c6f5a]">Want to stick to a favorite or try something new?</p>
+              </div>
+              <div class="flex flex-col md:flex-row gap-6 max-w-2xl mx-auto">
+                <button class="adventure-option flex flex-col items-center p-8 rounded-xl border-2 border-[#f1ede9] hover:border-[#5b371b] hover:bg-[#fbfaf9] transition-all flex-1" data-adventure="surprise">
+                  <div class="text-4xl mb-4">🎲</div>
+                  <h3 class="text-xl font-bold text-[#191410] mb-2">Surprise Me!</h3>
+                  <p class="text-[#8c6f5a] text-center">I'm open to any origin or roast</p>
+                </button>
+                <button class="adventure-option flex flex-col items-center p-8 rounded-xl border-2 border-[#f1ede9] hover:border-[#5b371b] hover:bg-[#fbfaf9] transition-all flex-1" data-adventure="region">
+                  <div class="text-4xl mb-4">🌍</div>
+                  <h3 class="text-xl font-bold text-[#191410] mb-2">Pick a Region</h3>
+                  <p class="text-[#8c6f5a] text-center">I have a favorite coffee origin</p>
+                </button>
+                <button class="adventure-option flex flex-col items-center p-8 rounded-xl border-2 border-[#f1ede9] hover:border-[#5b371b] hover:bg-[#fbfaf9] transition-all flex-1" data-adventure="roast">
+                  <div class="text-4xl mb-4">🔥</div>
+                  <h3 class="text-xl font-bold text-[#191410] mb-2">Pick a Roast</h3>
+                  <p class="text-[#8c6f5a] text-center">I prefer a specific roast level</p>
+                </button>
+              </div>
+              
+              <!-- Region Selection (hidden by default) -->
+              <div id="regionSelection" class="hidden mt-6 max-w-md mx-auto">
+                <label class="block text-[#191410] font-medium mb-2">Choose your preferred region:</label>
+                <select id="regionSelect" class="w-full p-3 border border-[#f1ede9] rounded-lg bg-white text-[#191410] focus:outline-none focus:border-[#5b371b]">
+                  <option value="">Select a region</option>
+                  <option value="Ethiopia">Ethiopia</option>
+                  <option value="Colombia">Colombia</option>
+                  <option value="Brazil">Brazil</option>
+                  <option value="Guatemala">Guatemala</option>
+                  <option value="Costa Rica">Costa Rica</option>
+                  <option value="Kenya">Kenya</option>
+                  <option value="Sumatra">Sumatra</option>
+                  <option value="Jamaica">Jamaica</option>
+                  <option value="Peru">Peru</option>
+                  <option value="Honduras">Honduras</option>
+                  <option value="Nicaragua">Nicaragua</option>
+                  <option value="Mexico">Mexico</option>
+                  <option value="Tanzania">Tanzania</option>
+                  <option value="Uganda">Uganda</option>
+                  <option value="Rwanda">Rwanda</option>
+                  <option value="Burundi">Burundi</option>
+                  <option value="Zambia">Zambia</option>
+                </select>
+              </div>
+              
+              <!-- Roast Selection (hidden by default) -->
+              <div id="roastSelection" class="hidden mt-6 max-w-md mx-auto">
+                <label class="block text-[#191410] font-medium mb-2">Choose your preferred roast level:</label>
+                <select id="roastSelect" class="w-full p-3 border border-[#f1ede9] rounded-lg bg-white text-[#191410] focus:outline-none focus:border-[#5b371b]">
+                  <option value="">Select a roast level</option>
+                  <option value="light">Light Roast</option>
+                  <option value="medium">Medium Roast</option>
+                  <option value="medium-dark">Medium-Dark Roast</option>
+                  <option value="dark">Dark Roast</option>
+                </select>
+              </div>
+              
+              <div class="text-center mt-8">
+                <button id="prevStep3" class="px-6 py-3 rounded-full bg-[#f1ede9] text-[#191410] font-medium mr-4 hover:bg-[#e8e0d8] transition-colors">
+                  Back
+                </button>
+                <button id="findMyBrew" class="px-8 py-3 rounded-full bg-[#5b371b] text-[#fbfaf9] font-bold text-lg hover:bg-[#4a2e15] transition-colors disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+                  Find My Brew
+                </button>
+              </div>
+            </div>
+
+            <!-- Results Section -->
+            <div id="results" class="step-container hidden">
+              <div class="text-center mb-8">
+                <h1 class="text-4xl font-bold text-[#191410] mb-4">Your Perfect Brew</h1>
+                <p class="text-lg text-[#8c6f5a]">Based on your preferences, here's what we found for you!</p>
+              </div>
+              <div id="brewResult" class="max-w-2xl mx-auto">
+                <!-- Results will be populated here -->
+              </div>
+              <div class="text-center mt-8">
+                <button id="tryAgain" class="px-6 py-3 rounded-full bg-[#f1ede9] text-[#191410] font-medium mr-4 hover:bg-[#e8e0d8] transition-colors">
+                  Try Again
+                </button>
+                <button id="surpriseMe" class="px-8 py-3 rounded-full bg-[#00704A] text-[#fbfaf9] font-bold text-lg hover:bg-[#005C38] transition-colors">
+                  Surprise Me Again!
+                </button>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="build-your-brew.js"></script>
+</body>
+</html> 

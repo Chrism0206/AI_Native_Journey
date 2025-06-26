@@ -1,0 +1,112 @@
+[
+  {
+    "id": "ethiopian-yirgacheffe",
+    "name": "Ethiopian Yirgacheffe",
+    "origin": "Ethiopia",
+    "roastLevel": "light",
+    "flavors": ["fruity", "floral", "citrus"],
+    "acidity": "high",
+    "body": "light",
+    "description": "A bright, complex coffee with distinctive floral and citrus notes. Known for its wine-like acidity and tea-like body.",
+    "rating": 4.8
+  },
+  {
+    "id": "colombian-supremo",
+    "name": "Colombian Supremo",
+    "origin": "Colombia",
+    "roastLevel": "medium",
+    "flavors": ["chocolate", "nutty", "caramel"],
+    "acidity": "medium",
+    "body": "medium",
+    "description": "A well-balanced coffee with smooth chocolate notes, subtle nuttiness, and a hint of caramel sweetness.",
+    "rating": 4.6
+  },
+  {
+    "id": "brazilian-santos",
+    "name": "Brazilian Santos",
+    "origin": "Brazil",
+    "roastLevel": "medium-dark",
+    "flavors": ["nutty", "chocolate", "earthy"],
+    "acidity": "low",
+    "body": "full",
+    "description": "A smooth, low-acid coffee with rich nutty flavors and a full body. Perfect for those who prefer milder acidity.",
+    "rating": 4.4
+  },
+  {
+    "id": "guatemalan-antigua",
+    "name": "Guatemalan Antigua",
+    "origin": "Guatemala",
+    "roastLevel": "medium",
+    "flavors": ["chocolate", "spicy", "earthy"],
+    "acidity": "medium",
+    "body": "full",
+    "description": "A full-bodied coffee with rich chocolate notes, subtle spice, and a smooth finish with medium acidity.",
+    "rating": 4.7
+  },
+  {
+    "id": "costa-rican-tarrazu",
+    "name": "Costa Rican Tarrazu",
+    "origin": "Costa Rica",
+    "roastLevel": "medium",
+    "flavors": ["fruity", "chocolate", "citrus"],
+    "acidity": "high",
+    "body": "medium",
+    "description": "A bright, clean coffee with vibrant fruit notes, balanced chocolate undertones, and crisp citrus acidity.",
+    "rating": 4.5
+  },
+  {
+    "id": "kenyan-aa",
+    "name": "Kenyan AA",
+    "origin": "Kenya",
+    "roastLevel": "medium",
+    "flavors": ["fruity", "citrus", "spicy"],
+    "acidity": "high",
+    "body": "medium",
+    "description": "A bold, bright coffee with intense berry flavors, zesty citrus notes, and a distinctive spicy finish.",
+    "rating": 4.8
+  },
+  {
+    "id": "sumatra-mandheling",
+    "name": "Sumatra Mandheling",
+    "origin": "Sumatra",
+    "roastLevel": "dark",
+    "flavors": ["earthy", "spicy", "chocolate"],
+    "acidity": "low",
+    "body": "full",
+    "description": "A full-bodied, low-acid coffee with deep earthy notes, rich chocolate undertones, and a spicy complexity.",
+    "rating": 4.3
+  },
+  {
+    "id": "jamaican-blue-mountain",
+    "name": "Jamaican Blue Mountain",
+    "origin": "Jamaica",
+    "roastLevel": "medium",
+    "flavors": ["chocolate", "nutty", "floral"],
+    "acidity": "medium",
+    "body": "medium",
+    "description": "A smooth, mild coffee with balanced chocolate and nutty flavors, subtle floral notes, and a clean finish.",
+    "rating": 4.9
+  },
+  {
+    "id": "peruvian-organic",
+    "name": "Peruvian Organic",
+    "origin": "Peru",
+    "roastLevel": "medium",
+    "flavors": ["nutty", "chocolate", "caramel"],
+    "acidity": "medium",
+    "body": "medium",
+    "description": "A well-rounded organic coffee with smooth nutty flavors, rich chocolate notes, and a hint of caramel sweetness.",
+    "rating": 4.4
+  },
+  {
+    "id": "honduran-marcala",
+    "name": "Honduran Marcala",
+    "origin": "Honduras",
+    "roastLevel": "medium-dark",
+    "flavors": ["chocolate", "caramel", "nutty"],
+    "acidity": "low",
+    "body": "full",
+    "description": "A full-bodied coffee with rich chocolate and caramel notes, smooth nuttiness, and a low-acid profile.",
+    "rating": 4.2
+  }
+] 
