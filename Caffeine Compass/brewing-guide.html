@@ -1,0 +1,287 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Manrope%3Awght%40400%3B500%3B700%3B800&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+
+    <title>Stitch Design</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden" style='font-family: Manrope, "Noto Sans", sans-serif;'>
+      <div class="layout-container flex h-full grow flex-col">
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f3f2f2] px-10 py-3">
+          <a href="index.html" class="flex items-center gap-4 text-[#151413]">
+            <img src="images/bean.png" alt="Caffeine Compass Logo" class="w-9 h-9 object-contain" />
+            <h2 class="text-[#151413] text-lg font-bold leading-tight tracking-[-0.015em]">Caffeine Compass</h2>
+          </a>
+          <div class="flex flex-1 justify-end gap-8">
+            <div class="flex items-center gap-9">
+              <a class="text-[#151413] text-sm font-medium leading-normal" href="#">Shop</a>
+              <a class="text-[#151413] text-sm font-medium leading-normal" href="#">Brew Guides</a>
+              <a class="text-[#151413] text-sm font-medium leading-normal" href="#">Subscriptions</a>
+              <a class="text-[#151413] text-sm font-medium leading-normal" href="#">Learn</a>
+            </div>
+            <div class="flex gap-2">
+              <button
+                class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 bg-[#f3f2f2] text-[#151413] gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5"
+              >
+                <div class="text-[#151413]" data-icon="MagnifyingGlass" data-size="20px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                    <path
+                      d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
+                    ></path>
+                  </svg>
+                </div>
+              </button>
+              <button
+                class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 bg-[#f3f2f2] text-[#151413] gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5"
+              >
+                <div class="text-[#151413]" data-icon="User" data-size="20px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                    <path
+                      d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"
+                    ></path>
+                  </svg>
+                </div>
+              </button>
+            </div>
+            <div
+              class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAcl8Mieo9AlnzJazLoQyZIvakeZO8M0CY18NtQQqFHmJX0yh2WiSz83mbUTYLDo_XZpg5jJpN9ckl3fZmQ0AUNIpumy5CS0d4GjYERBjVAy09-VHljXp-V0I-443rwNEbaEsK95DAkjJ85xG287QFcdlDCpaRZ8R2PaSgxFCY17TzBngZQu1zGwVLoLdPesX2xEKg1jJ3Vz_9Ns92G1lOfB4CEjXbmedJDQcc4RVqymbvqr7bu6gVdi6xrVjTRaJwbs_0eYsSFT6E");'
+            ></div>
+          </div>
+        </header>
+        <div class="px-40 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <div class="flex flex-wrap justify-between gap-3 p-4"><p class="text-[#151413] tracking-light text-[32px] font-bold leading-tight min-w-72">Brewing Guides</p></div>
+            <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBxCxnH8nW0PVeTa_jGbPNcwGq9mlKV6xbaZNx7jdFJYBCIwEIK_Gd6Ww5yzxiXGUKAACs6CQlXdkeG4YhqkSKPaCSZQXqpR3KIZgBffrVB_tX-0ZbMAqrLa_djuOlqEojIeXUduSm0Wii6X4vOV9KefdPiknAjObbeLvEmwDlOUzoijuniZoBWOloFZG0B8-P7jrBquqTIxrAGFMXrEBMIoM2L65TnDMZaB3U1IU_sbTVBTvqMjRvGItFwWX-7PENC4VtAvb_cN5k");'
+                ></div>
+                <div>
+                  <p class="text-[#151413] text-base font-medium leading-normal">Foundational Brewing Knowledge</p>
+                  <p class="text-[#7b756f] text-sm font-normal leading-normal">Learn the basics of coffee brewing.</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA2R9c-X3YjzKt_J92-2SZdUTDiz9JNfhyL-2Cq-l_DT98FhaT0G7TYGbkuG7scLGOmLMI_C8P1MsqY0lbc_q7sjHilJhBWnRK8k8ZoGh-NsQzrh3ObGDofjAhnCd1F-XX6wumINSynEljro-dPWkbixa5c64okuOLfSGEfSqYf4miRiNclPP9EdhubraGaq9q08gKXD4Kq5_V6sbxzp75Ej_SGsF-fawLeS7AdGNJOsKsCHY9l6lP82Oo1HcvDxS-BTLlLnVUV7kM");'
+                ></div>
+                <div>
+                  <p class="text-[#151413] text-base font-medium leading-normal">Method-Specific Brewing Guides</p>
+                  <p class="text-[#7b756f] text-sm font-normal leading-normal">Explore guides for specific brewing methods.</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAAGqWB5VhepEKkvQPP_DRDQshYutuHyYikNkL-h-vAWR8Qfc8kzEsir53V5qLm1lg-8A88fG1ws7irCYwVZbnbVcxQ-TtM7JxvI8SizDb8Qs04yHTosiu-gJQAjR_bqYaTv--cYbwR5F_W9U4j0T3aE0Z1S95sMX1csD3blHJKJ2qWQ0FnFLN7XsDPmCqJbP6geTIZX-tnle5WNsSoRi8neASjqEBOawhZ_fIseUrXg7CfEmIolCEzLJO57zZk_JsTi_NP7iq91tA");'
+                ></div>
+                <div>
+                  <p class="text-[#151413] text-base font-medium leading-normal">Optimizing Your Brew</p>
+                  <p class="text-[#7b756f] text-sm font-normal leading-normal">Tips to enhance your coffee brewing.</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB_NwlqIrBIfS-yQdMHjkerT_oBvOWwS-IM4dVld2aKL8DAyfC7yM81Avzo9moKznLh7SgfOjumntFgVUhL-N0yyGC06JsX1866Wb4or12A5pfJ-TOjNRkjno1mlW_0TtvW4ZpdfrhR07_jVanMLqqWCxlkBGXM7RIvWxrgviqXCrTZd-8KCQDJHkJGTMvJgX0NX7pAxzjB3cT2zvlC2kvHtz5puyv6qC9H_FUqtXUhrEDnTqwYadZtlxM6bIe6EksiJxOUfR1_dxg");'
+                ></div>
+                <div>
+                  <p class="text-[#151413] text-base font-medium leading-normal">Glossary of Coffee Terms</p>
+                  <p class="text-[#7b756f] text-sm font-normal leading-normal">Understand common coffee terms.</p>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col p-4 gap-3">
+              <details class="flex flex-col rounded-xl border border-[#e2e0df] bg-white px-[15px] py-[7px] group">
+                <summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
+                  <p class="text-[#151413] text-sm font-medium leading-normal">Introduction to Brewing Methods</p>
+                  <div class="text-[#151413] group-open:rotate-180" data-icon="CaretDown" data-size="20px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                      <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+                    </svg>
+                  </div>
+                </summary>
+                <p class="text-[#7b756f] text-sm font-normal leading-normal pb-2"></p>
+              </details>
+              <details class="flex flex-col rounded-xl border border-[#e2e0df] bg-white px-[15px] py-[7px] group">
+                <summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
+                  <p class="text-[#151413] text-sm font-medium leading-normal">Essential Equipment</p>
+                  <div class="text-[#151413] group-open:rotate-180" data-icon="CaretDown" data-size="20px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                      <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+                    </svg>
+                  </div>
+                </summary>
+                <p class="text-[#7b756f] text-sm font-normal leading-normal pb-2"></p>
+              </details>
+              <details class="flex flex-col rounded-xl border border-[#e2e0df] bg-white px-[15px] py-[7px] group">
+                <summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
+                  <p class="text-[#151413] text-sm font-medium leading-normal">The Importance of Water</p>
+                  <div class="text-[#151413] group-open:rotate-180" data-icon="CaretDown" data-size="20px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                      <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+                    </svg>
+                  </div>
+                </summary>
+                <p class="text-[#7b756f] text-sm font-normal leading-normal pb-2"></p>
+              </details>
+              <details class="flex flex-col rounded-xl border border-[#e2e0df] bg-white px-[15px] py-[7px] group">
+                <summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
+                  <p class="text-[#151413] text-sm font-medium leading-normal">Grind Size Explained</p>
+                  <div class="text-[#151413] group-open:rotate-180" data-icon="CaretDown" data-size="20px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                      <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+                    </svg>
+                  </div>
+                </summary>
+                <p class="text-[#7b756f] text-sm font-normal leading-normal pb-2"></p>
+              </details>
+            </div>
+            <div class="flex flex-col p-4 gap-3">
+              <details class="flex flex-col rounded-xl border border-[#e2e0df] bg-white px-[15px] py-[7px] group">
+                <summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
+                  <p class="text-[#151413] text-sm font-medium leading-normal">Pour Over</p>
+                  <div class="text-[#151413] group-open:rotate-180" data-icon="CaretDown" data-size="20px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                      <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+                    </svg>
+                  </div>
+                </summary>
+                <p class="text-[#7b756f] text-sm font-normal leading-normal pb-2"></p>
+              </details>
+              <details class="flex flex-col rounded-xl border border-[#e2e0df] bg-white px-[15px] py-[7px] group">
+                <summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
+                  <p class="text-[#151413] text-sm font-medium leading-normal">French Press</p>
+                  <div class="text-[#151413] group-open:rotate-180" data-icon="CaretDown" data-size="20px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                      <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+                    </svg>
+                  </div>
+                </summary>
+                <p class="text-[#7b756f] text-sm font-normal leading-normal pb-2"></p>
+              </details>
+              <details class="flex flex-col rounded-xl border border-[#e2e0df] bg-white px-[15px] py-[7px] group">
+                <summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
+                  <p class="text-[#151413] text-sm font-medium leading-normal">Aeropress</p>
+                  <div class="text-[#151413] group-open:rotate-180" data-icon="CaretDown" data-size="20px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                      <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+                    </svg>
+                  </div>
+                </summary>
+                <p class="text-[#7b756f] text-sm font-normal leading-normal pb-2"></p>
+              </details>
+              <details class="flex flex-col rounded-xl border border-[#e2e0df] bg-white px-[15px] py-[7px] group">
+                <summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
+                  <p class="text-[#151413] text-sm font-medium leading-normal">Espresso</p>
+                  <div class="text-[#151413] group-open:rotate-180" data-icon="CaretDown" data-size="20px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                      <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+                    </svg>
+                  </div>
+                </summary>
+                <p class="text-[#7b756f] text-sm font-normal leading-normal pb-2"></p>
+              </details>
+              <details class="flex flex-col rounded-xl border border-[#e2e0df] bg-white px-[15px] py-[7px] group">
+                <summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
+                  <p class="text-[#151413] text-sm font-medium leading-normal">Cold Brew</p>
+                  <div class="text-[#151413] group-open:rotate-180" data-icon="CaretDown" data-size="20px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                      <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+                    </svg>
+                  </div>
+                </summary>
+                <p class="text-[#7b756f] text-sm font-normal leading-normal pb-2"></p>
+              </details>
+              <details class="flex flex-col rounded-xl border border-[#e2e0df] bg-white px-[15px] py-[7px] group">
+                <summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
+                  <p class="text-[#151413] text-sm font-medium leading-normal">Moka Pot</p>
+                  <div class="text-[#151413] group-open:rotate-180" data-icon="CaretDown" data-size="20px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                      <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+                    </svg>
+                  </div>
+                </summary>
+                <p class="text-[#7b756f] text-sm font-normal leading-normal pb-2"></p>
+              </details>
+            </div>
+            <div class="flex flex-col p-4 gap-3">
+              <details class="flex flex-col rounded-xl border border-[#e2e0df] bg-white px-[15px] py-[7px] group">
+                <summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
+                  <p class="text-[#151413] text-sm font-medium leading-normal">Coffee-to-Water Ratios</p>
+                  <div class="text-[#151413] group-open:rotate-180" data-icon="CaretDown" data-size="20px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                      <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+                    </svg>
+                  </div>
+                </summary>
+                <p class="text-[#7b756f] text-sm font-normal leading-normal pb-2"></p>
+              </details>
+              <details class="flex flex-col rounded-xl border border-[#e2e0df] bg-white px-[15px] py-[7px] group">
+                <summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
+                  <p class="text-[#151413] text-sm font-medium leading-normal">Water Temperature</p>
+                  <div class="text-[#151413] group-open:rotate-180" data-icon="CaretDown" data-size="20px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                      <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+                    </svg>
+                  </div>
+                </summary>
+                <p class="text-[#7b756f] text-sm font-normal leading-normal pb-2"></p>
+              </details>
+              <details class="flex flex-col rounded-xl border border-[#e2e0df] bg-white px-[15px] py-[7px] group">
+                <summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
+                  <p class="text-[#151413] text-sm font-medium leading-normal">Brew Time</p>
+                  <div class="text-[#151413] group-open:rotate-180" data-icon="CaretDown" data-size="20px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                      <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+                    </svg>
+                  </div>
+                </summary>
+                <p class="text-[#7b756f] text-sm font-normal leading-normal pb-2"></p>
+              </details>
+              <details class="flex flex-col rounded-xl border border-[#e2e0df] bg-white px-[15px] py-[7px] group">
+                <summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
+                  <p class="text-[#151413] text-sm font-medium leading-normal">Storage of Coffee Beans</p>
+                  <div class="text-[#151413] group-open:rotate-180" data-icon="CaretDown" data-size="20px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                      <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+                    </svg>
+                  </div>
+                </summary>
+                <p class="text-[#7b756f] text-sm font-normal leading-normal pb-2"></p>
+              </details>
+            </div>
+          </div>
+        </div>
+        <footer class="flex justify-center">
+          <div class="flex max-w-[960px] flex-1 flex-col">
+            <footer class="flex flex-col gap-6 px-5 py-10 text-center @container">
+              <div class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
+                <a class="text-[#7b756f] text-base font-normal leading-normal min-w-40" href="#">Shop</a>
+                <a class="text-[#7b756f] text-base font-normal leading-normal min-w-40" href="#">Subscriptions</a>
+                <a class="text-[#7b756f] text-base font-normal leading-normal min-w-40" href="#">Learn</a>
+                <a class="text-[#7b756f] text-base font-normal leading-normal min-w-40" href="#">Brew Guides</a>
+                <a class="text-[#7b756f] text-base font-normal leading-normal min-w-40" href="#">Contact Us</a>
+                <a class="text-[#7b756f] text-base font-normal leading-normal min-w-40" href="#">FAQ</a>
+              </div>
+              <p class="text-[#7b756f] text-base font-normal leading-normal">@2024 Caffeine Compass. All rights reserved.</p>
+            </footer>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
+ 
