@@ -108,5 +108,38 @@
     "body": "full",
     "description": "A full-bodied coffee with rich chocolate and caramel notes, smooth nuttiness, and a low-acid profile.",
     "rating": 4.2
+  },
+  {
+    "id": "dominican-barahona",
+    "name": "Dominican Barahona",
+    "origin": "Dominican Republic",
+    "roastLevel": "medium",
+    "flavors": ["chocolate", "fruity", "nutty"],
+    "acidity": "medium",
+    "body": "medium",
+    "description": "A smooth, well-balanced coffee with notes of chocolate, subtle fruitiness, and a mild nutty finish. Grown in the Barahona region, known for its rich volcanic soil.",
+    "rating": 4.5
+  },
+  {
+    "id": "haitian-blue",
+    "name": "Haitian Blue",
+    "origin": "Haiti",
+    "roastLevel": "light",
+    "flavors": ["floral", "citrus", "chocolate"],
+    "acidity": "high",
+    "body": "light",
+    "description": "A delicate, aromatic coffee with floral and citrus notes, complemented by a gentle chocolate undertone. Haitian Blue is prized for its clean cup and bright acidity.",
+    "rating": 4.4
+  },
+  {
+    "id": "puerto-rico-yauco",
+    "name": "Puerto Rico Yauco Selecto",
+    "origin": "Puerto Rico",
+    "roastLevel": "medium-dark",
+    "flavors": ["caramel", "chocolate", "earthy"],
+    "acidity": "low",
+    "body": "full",
+    "description": "A rich, full-bodied coffee with deep caramel sweetness, chocolate notes, and a smooth earthy finish. Yauco Selecto is one of Puerto Rico's most celebrated coffees.",
+    "rating": 4.6
   }
 ] 

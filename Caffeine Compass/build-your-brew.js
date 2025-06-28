@@ -154,7 +154,19 @@ document.querySelectorAll('.adventure-option').forEach(button => {
 // Region selection change
 regionSelect.addEventListener('change', function() {
     userSelections.region = this.value;
-    findMyBrew.disabled = !this.value;
+    // Check if the selected region exists in the coffee database
+    const regionExists = coffeeDatabase.some(coffee => coffee.origin === this.value);
+    findMyBrew.disabled = !this.value || !regionExists;
+    // Optionally, show a message if region is not available
+    const regionMsg = document.getElementById('regionErrorMsg');
+    if (regionMsg) regionMsg.remove();
+    if (this.value && !regionExists) {
+        const msg = document.createElement('div');
+        msg.id = 'regionErrorMsg';
+        msg.className = 'text-red-600 text-sm mt-2';
+        msg.textContent = 'Sorry, we don\'t have coffees from this region yet.';
+        this.parentNode.appendChild(msg);
+    }
 });
 
 // Roast selection change

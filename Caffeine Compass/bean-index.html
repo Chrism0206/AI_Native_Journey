@@ -23,10 +23,11 @@
               <h2 class="text-[#151413] text-lg font-bold leading-tight tracking-[-0.015em]">Caffeine Compass</h2>
             </a>
             <div class="flex items-center gap-9">
-              <a class="text-[#151413] text-sm font-medium leading-normal" href="index.html">Home</a>
-              <a class="text-[#151413] text-sm font-medium leading-normal" href="recommendations.html">Recommendations</a>
-              <a class="text-[#151413] text-sm font-medium leading-normal" href="bean-index.html">Beans</a>
-              <a class="text-[#151413] text-sm font-medium leading-normal" href="#">Brewing Guides</a>
+              <a class="text-[#151413] text-sm font-medium leading-normal px-4 py-2 rounded-full bg-[#f3f2f2] hover:bg-[#e8e0d8] transition-colors" href="index.html">Home</a>
+              <a class="text-[#151413] text-sm font-medium leading-normal px-4 py-2 rounded-full bg-[#f3f2f2] hover:bg-[#e8e0d8] transition-colors" href="recommendations.html">Recommendations</a>
+              <a class="text-[#151413] text-sm font-medium leading-normal px-4 py-2 rounded-full bg-[#f3f2f2] hover:bg-[#e8e0d8] transition-colors" href="bean-index.html">Beans</a>
+              <a class="text-[#151413] text-sm font-medium leading-normal px-4 py-2 rounded-full bg-[#f3f2f2] hover:bg-[#e8e0d8] transition-colors" href="brewing-guide.html">Brewing Guides</a>
+              <a class="text-[#151413] text-sm font-medium leading-normal px-4 py-2 rounded-full bg-[#f3f2f2] hover:bg-[#e8e0d8] transition-colors" href="about.html">About</a>
             </div>
           </div>
           <div class="flex flex-1 justify-end gap-8">
@@ -51,10 +52,12 @@
                 />
               </div>
             </label>
-            <div
-              class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
-              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCBv4Dv3fLdsWd-8WzQBrvp2hDmQeybd62NbvKkQS6OPNKYKy5Pmbv5mixmFdtRG2KMx_6TcWUtt3eN-h4gtghHRKAvUG1pEWGANEOMflx7X3e03dB55_RoQjnQ2zmZ49cjX_c84Kz8gKDKMOT2L-6dpkxeeoEfowZcuzn5s0BkUlYT0fYdk1eaLtRaYx_oq92VX9rEqmZR3ucQDrc-0QCA5K4Uki_y0kX6eDLzlHpbFawkMI4yGyLMcGC03D62BQ2YKe9xEOZSu2U");'
-            ></div>
+            <a href="userprofile.html">
+              <div
+                class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCBv4Dv3fLdsWd-8WzQBrvp2hDmQeybd62NbvKkQS6OPNKYKy5Pmbv5mixmFdtRG2KMx_6TcWUtt3eN-h4gtghHRKAvUG1pEWGANEOMflx7X3e03dB55_RoQjnQ2zmZ49cjX_c84Kz8gKDKMOT2L-6dpkxeeoEfowZcuzn5s0BkUlYT0fYdk1eaLtRaYx_oq92VX9rEqmZR3ucQDrc-0QCA5K4Uki_y0kX6eDLzlHpbFawkMI4yGyLMcGC03D62BQ2YKe9xEOZSu2U");'
+              ></div>
+            </a>
           </div>
         </header>
         <div class="px-40 flex flex-1 justify-center py-5">
@@ -92,33 +95,77 @@
               </label>
             </div>
             <div class="flex gap-3 p-3 flex-wrap pr-4">
-              <button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#f3f2f2] pl-4 pr-2">
-                <p class="text-[#151413] text-sm font-medium leading-normal">Roast Level</p>
-                <div class="text-[#151413]" data-icon="CaretDown" data-size="20px" data-weight="regular">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
-                    <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
-                  </svg>
+              <div class="relative">
+                <button id="roastFilterBtn" class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#f3f2f2] pl-4 pr-2 cursor-pointer transition-shadow focus:outline-none focus:ring-2 focus:ring-[#bca16b] hover:shadow-md">
+                  <p class="text-[#151413] text-sm font-medium leading-normal">Roast Level</p>
+                  <div class="text-[#151413]" data-icon="CaretDown" data-size="20px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                      <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+                    </svg>
+                  </div>
+                </button>
+                <div id="roastDropdown" class="hidden absolute left-0 mt-2 w-40 rounded-xl bg-white shadow-lg z-10">
+                  <button class="block w-full text-left px-4 py-2 hover:bg-[#f5eee6]">Light</button>
+                  <button class="block w-full text-left px-4 py-2 hover:bg-[#f5eee6]">Medium</button>
+                  <button class="block w-full text-left px-4 py-2 hover:bg-[#f5eee6]">Medium-Dark</button>
+                  <button class="block w-full text-left px-4 py-2 hover:bg-[#f5eee6]">Dark</button>
                 </div>
-              </button>
-              <button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#f3f2f2] pl-4 pr-2">
-                <p class="text-[#151413] text-sm font-medium leading-normal">Flavor Profile</p>
-                <div class="text-[#151413]" data-icon="CaretDown" data-size="20px" data-weight="regular">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
-                    <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
-                  </svg>
+              </div>
+              <div class="relative">
+                <button id="flavorFilterBtn" class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#f3f2f2] pl-4 pr-2 cursor-pointer transition-shadow focus:outline-none focus:ring-2 focus:ring-[#bca16b] hover:shadow-md">
+                  <p class="text-[#151413] text-sm font-medium leading-normal">Flavor Profile</p>
+                  <div class="text-[#151413]" data-icon="CaretDown" data-size="20px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                      <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+                    </svg>
+                  </div>
+                </button>
+                <div id="flavorDropdown" class="hidden absolute left-0 mt-2 w-48 rounded-xl bg-white shadow-lg z-10">
+                  <button class="block w-full text-left px-4 py-2 hover:bg-[#f5eee6]">Fruity</button>
+                  <button class="block w-full text-left px-4 py-2 hover:bg-[#f5eee6]">Chocolate</button>
+                  <button class="block w-full text-left px-4 py-2 hover:bg-[#f5eee6]">Nutty</button>
+                  <button class="block w-full text-left px-4 py-2 hover:bg-[#f5eee6]">Caramel</button>
+                  <button class="block w-full text-left px-4 py-2 hover:bg-[#f5eee6]">Floral</button>
+                  <button class="block w-full text-left px-4 py-2 hover:bg-[#f5eee6]">Spicy</button>
+                  <button class="block w-full text-left px-4 py-2 hover:bg-[#f5eee6]">Earthy</button>
+                  <button class="block w-full text-left px-4 py-2 hover:bg-[#f5eee6]">Citrus</button>
                 </div>
-              </button>
-              <button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#f3f2f2] pl-4 pr-2">
-                <p class="text-[#151413] text-sm font-medium leading-normal">Origin</p>
-                <div class="text-[#151413]" data-icon="CaretDown" data-size="20px" data-weight="regular">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
-                    <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
-                  </svg>
+              </div>
+              <div class="relative">
+                <button id="originFilterBtn" class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#f3f2f2] pl-4 pr-2 cursor-pointer transition-shadow focus:outline-none focus:ring-2 focus:ring-[#bca16b] hover:shadow-md">
+                  <p class="text-[#151413] text-sm font-medium leading-normal">Origin</p>
+                  <div class="text-[#151413]" data-icon="CaretDown" data-size="20px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                      <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+                    </svg>
+                  </div>
+                </button>
+                <div id="originDropdown" class="hidden absolute left-0 mt-2 w-48 rounded-xl bg-white shadow-lg z-10">
+                  <button class="block w-full text-left px-4 py-2 hover:bg-[#f5eee6]">Ethiopia</button>
+                  <button class="block w-full text-left px-4 py-2 hover:bg-[#f5eee6]">Colombia</button>
+                  <button class="block w-full text-left px-4 py-2 hover:bg-[#f5eee6]">Brazil</button>
+                  <button class="block w-full text-left px-4 py-2 hover:bg-[#f5eee6]">Guatemala</button>
+                  <button class="block w-full text-left px-4 py-2 hover:bg-[#f5eee6]">Costa Rica</button>
+                  <button class="block w-full text-left px-4 py-2 hover:bg-[#f5eee6]">Kenya</button>
+                  <button class="block w-full text-left px-4 py-2 hover:bg-[#f5eee6]">Sumatra</button>
+                  <button class="block w-full text-left px-4 py-2 hover:bg-[#f5eee6]">Jamaica</button>
+                  <button class="block w-full text-left px-4 py-2 hover:bg-[#f5eee6]">Peru</button>
+                  <button class="block w-full text-left px-4 py-2 hover:bg-[#f5eee6]">Honduras</button>
+                  <button class="block w-full text-left px-4 py-2 hover:bg-[#f5eee6]">Nicaragua</button>
+                  <button class="block w-full text-left px-4 py-2 hover:bg-[#f5eee6]">Mexico</button>
+                  <button class="block w-full text-left px-4 py-2 hover:bg-[#f5eee6]">Tanzania</button>
+                  <button class="block w-full text-left px-4 py-2 hover:bg-[#f5eee6]">Uganda</button>
+                  <button class="block w-full text-left px-4 py-2 hover:bg-[#f5eee6]">Rwanda</button>
+                  <button class="block w-full text-left px-4 py-2 hover:bg-[#f5eee6]">Burundi</button>
+                  <button class="block w-full text-left px-4 py-2 hover:bg-[#f5eee6]">Zambia</button>
+                  <button class="block w-full text-left px-4 py-2 hover:bg-[#f5eee6]">Dominican Republic</button>
+                  <button class="block w-full text-left px-4 py-2 hover:bg-[#f5eee6]">Haiti</button>
+                  <button class="block w-full text-left px-4 py-2 hover:bg-[#f5eee6]">Puerto Rico</button>
                 </div>
-              </button>
+              </div>
             </div>
-            <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
-              <div class="flex flex-col gap-3 pb-3">
+            <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-x-3 gap-y-8 p-4">
+              <div class="flex flex-col gap-3 pb-3 rounded-xl overflow-hidden transition-transform duration-200 ease-in-out hover:scale-105 hover:shadow-xl hover:bg-[#f5eee6] cursor-pointer">
                 <div
                   class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl"
                   style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDqv38FkhOSNJXIcPD87PBPiCXPtR7kCh2I9ErMc0YdUGYV3GnsbsSwqjKYh5Gye3sp5XiAPbJcrv2yENlHViGyOQTEUZhFON9ECE2O1Mlz_BFWBCrsmysYP2xCQBDh7Z5mjk4DtoTSHvQhGRxHG-do8LLWEfqdTGa9iJYQ_z7wN3wdVkmTdtYNUDLNmizS-LP_6VFvD2X6b_OaRXsJbymZ-S2UDA1ywYO_g2lxwWndDDjblfOP3LQgBARGs_vyLwUgwL7Y8bH0Kro");'
@@ -128,7 +175,7 @@
                   <p class="text-[#7b756f] text-sm font-normal leading-normal">Light roast, floral and citrus notes</p>
                 </div>
               </div>
-              <div class="flex flex-col gap-3 pb-3">
+              <div class="flex flex-col gap-3 pb-3 rounded-xl overflow-hidden transition-transform duration-200 ease-in-out hover:scale-105 hover:shadow-xl hover:bg-[#f5eee6] cursor-pointer">
                 <div
                   class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl"
                   style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDInoDQGFfKqVnIcf4rQRxLHl6AY4wLgiNQsH_HpIQ9xR8XnJF16MWAbuVOHy2hnbAtl95dG3Kvd2uPWWo1Bs9ZHF6pZ2ja08F-Y82wDAs-KNymku6U45rAgbyo8a1R_6trkq1wgSHaWeU1dlPAzxp4gzMc8i5qlUu8iQQfmLPM16YH5QdycF_6c8sh2ImItHAyuoh_IrK3CcFCp-580zJADiJ_sjYLd9eXQD400XivHwlTI9i44hKZoO9OVlKp5mKfqheIzEjAc-E");'
@@ -138,7 +185,7 @@
                   <p class="text-[#7b756f] text-sm font-normal leading-normal">Medium-dark roast, earthy and chocolatey</p>
                 </div>
               </div>
-              <div class="flex flex-col gap-3 pb-3">
+              <div class="flex flex-col gap-3 pb-3 rounded-xl overflow-hidden transition-transform duration-200 ease-in-out hover:scale-105 hover:shadow-xl hover:bg-[#f5eee6] cursor-pointer">
                 <div
                   class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl"
                   style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDCPR3RiOaJe_631fjlvkHgA-nT0ciydJYYgbvd60fqZ8DBDVvM0rCoLNNu3-yzSco3DnwCsg5RJ6oFDx-X6EEwxgDBfpqpcVPycZ-QtYO0KVc14e7zbudJGYJas85kCb0RgVimpY9BrHZNMQwBvSNOXMm1RkFlsq0jIA9RK1ABFL2V7HHji8NxAdyK4kn3AFi5q2X8mqomp245YSsme3RKPb0Ysx6QJFC9bGEfo0m2n_GbfhNo-szjnAYooZUpJRiK54VZSEXE-C4");'
@@ -148,7 +195,7 @@
                   <p class="text-[#7b756f] text-sm font-normal leading-normal">Medium roast, bright acidity and fruity</p>
                 </div>
               </div>
-              <div class="flex flex-col gap-3 pb-3">
+              <div class="flex flex-col gap-3 pb-3 rounded-xl overflow-hidden transition-transform duration-200 ease-in-out hover:scale-105 hover:shadow-xl hover:bg-[#f5eee6] cursor-pointer">
                 <div
                   class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl"
                   style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAkYpelZWtZSUPbIHOS0-P7vL92Pe_kHLa3jucYyQ3AGa9iogbWiSqh4QGEtu8VX-hpZz6ZNMZXGn6nQ8V6TNIEstVKucNCMKnJ_ItHdegAHPeUtkSRqsLUoRdMyilPQCzmHKzgXUcjiOMf2b4PuvR1WdLZE0tPxFqWhzKsBoYmfwmGkfrKhsAzj2GlrzU60gn8REoXlBqFX_-7uDzuEdH77ouq7MeaV-tntJhf7oXHdsww3YDNzPBTMLRqjmBpZLJMsqpS0yfWjH8");'
@@ -158,7 +205,7 @@
                   <p class="text-[#7b756f] text-sm font-normal leading-normal">Medium roast, balanced and nutty</p>
                 </div>
               </div>
-              <div class="flex flex-col gap-3 pb-3">
+              <div class="flex flex-col gap-3 pb-3 rounded-xl overflow-hidden transition-transform duration-200 ease-in-out hover:scale-105 hover:shadow-xl hover:bg-[#f5eee6] cursor-pointer">
                 <div
                   class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl"
                   style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuClHmkbEBIeuf4mV9dhiaT4OqsKBpQi2vbYhAZCyvUUJ4FF7o7JmfND-TaDcRa2zlApq2Y_P6hrWwBoWmKcFBOlfWf31FPD8IovFGjvbsP4J0vbgKkNcE6ipevHvhj7Sx_gl9yHBkiKhtMN1QII732nosg2Gyvfc7zp6k-TLcGSMQ2ZGWAWh1dkItG5RxFIAOO9I92V9Hkizlp9sbpGpoMl5t0ePOxm8LvCRyafdIrmq7G78ahmyqNOwRD3pKVQFjMuL6hJlLCLq4s");'
@@ -168,17 +215,37 @@
                   <p class="text-[#7b756f] text-sm font-normal leading-normal">Medium roast, spicy and chocolatey</p>
                 </div>
               </div>
-              <div class="flex flex-col gap-3 pb-3">
+              <div class="flex flex-col gap-3 pb-3 rounded-xl overflow-hidden transition-transform duration-200 ease-in-out hover:scale-105 hover:shadow-xl hover:bg-[#f5eee6] cursor-pointer">
                 <div
                   class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl"
                   style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDt7gJJZCUGrUD9xcWubIOURDc8xtJ7IFRaaJFfpJyKZGCkg382EiLz6hN1h5Dq21t8Cl-HhY7xdLPGSkrguKm9eypkJ0prNjqUrmjdQN6sO9M7ZBM6ARXLCHcUDKkMRLw2_fllxEkLzSKWh6vUI4ZWZjR9dX5RymF41BPsBfYBUb2AP12qo-i_zZ7CxQyepSevxIxhjiZ3HPurFaGs3gyBQzPzb_cppi7WI1c3eFbv-uY0C0rBYHy36kewuFnOyD0_HORi8EZskG0");'
+                ></div>
+                <div>
+                  <p class="text-[#151413] text-base font-medium leading-normal">Sulawesi Toraja</p>
+                  <p class="text-[#7b756f] text-sm font-normal leading-normal">Medium-dark roast, earthy, full-bodied, with spicy notes</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 pb-3 rounded-xl overflow-hidden transition-transform duration-200 ease-in-out hover:scale-105 hover:shadow-xl hover:bg-[#f5eee6] cursor-pointer">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBjNMB6zj6K-7iTe7tCUNP45KT-sCGJDNcBcZ-wI7hemWIrYtw340fEXEjxwSESRTmF3V3ehgA60bd_6Ax8VnmBBugOpjvo3QLfeDMDCQWs0XSpU2Jm9AmuJWzwbBGKCbmSuDzeGrErBwzpr__WPCQ-pHtI9OQh0OgFxF5qs1LCv3meRKRr6Fb-y9m77UlR9ahtPFbm0NWqG75UHLkraQvozmHGWrw7PhlrFqyH3y8urkQzWfwTjQDdAS_GpdDtCelx0c6iuhDmHd0");'
+                ></div>
+                <div>
+                  <p class="text-[#151413] text-base font-medium leading-normal">Panama Geisha</p>
+                  <p class="text-[#7b756f] text-sm font-normal leading-normal">Light roast, floral, jasmine, and bergamot notes, very aromatic</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 pb-3 rounded-xl overflow-hidden transition-transform duration-200 ease-in-out hover:scale-105 hover:shadow-xl hover:bg-[#f5eee6] cursor-pointer">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCVUuG7pny88uqrwpCGiNjkMuTa4ysdVu2VabWVUZAq1cryYSubCzh3G7DhFkBDxCp-USDMikZlozfSNeWJ9EsPZYTWfabxFb_KpCQCzYMkkuPeSVtC4Rh1g-ABgMUHp7JlTTrtmSVqYdkGFcNCZZdl5UxJ6dveoU6qN4156OSgXPe_Wq3rRuK2oqRnvHoLcR28K68S0NtJMh8ogSEIDzcxCATqNXp9utC2YywWJTmhh-wHg0ytbiua-MNc8vTSzXhNJJNnKxzO940");'
                 ></div>
                 <div>
                   <p class="text-[#151413] text-base font-medium leading-normal">Costa Rican Tarrazu</p>
                   <p class="text-[#7b756f] text-sm font-normal leading-normal">Light-medium roast, citrus and chocolate</p>
                 </div>
               </div>
-              <div class="flex flex-col gap-3 pb-3">
+              <div class="flex flex-col gap-3 pb-3 rounded-xl overflow-hidden transition-transform duration-200 ease-in-out hover:scale-105 hover:shadow-xl hover:bg-[#f5eee6] cursor-pointer">
                 <div
                   class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl"
                   style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBjNMB6zj6K-7iTe7tCUNP45KT-sCGJDNcBcZ-wI7hemWIrYtw340fEXEjxwSESRTmF3V3ehgA60bd_6Ax8VnmBBugOpjvo3QLfeDMDCQWs0XSpU2Jm9AmuJWzwbBGKCbmSuDzeGrErBwzpr__WPCQ-pHtI9OQh0OgFxF5qs1LCv3meRKRr6Fb-y9m77UlR9ahtPFbm0NWqG75UHLkraQvozmHGWrw7PhlrFqyH3y8urkQzWfwTjQDdAS_GpdDtCelx0c6iuhDmHd0");'
@@ -188,7 +255,7 @@
                   <p class="text-[#7b756f] text-sm font-normal leading-normal">Medium roast, nutty and mild</p>
                 </div>
               </div>
-              <div class="flex flex-col gap-3 pb-3">
+              <div class="flex flex-col gap-3 pb-3 rounded-xl overflow-hidden transition-transform duration-200 ease-in-out hover:scale-105 hover:shadow-xl hover:bg-[#f5eee6] cursor-pointer">
                 <div
                   class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl"
                   style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCVUuG7pny88uqrwpCGiNjkMuTa4ysdVu2VabWVUZAq1cryYSubCzh3G7DhFkBDxCp-USDMikZlozfSNeWJ9EsPZYTWfabxFb_KpCQCzYMkkuPeSVtC4Rh1g-ABgMUHp7JlTTrtmSVqYdkGFcNCZZdl5UxJ6dveoU6qN4156OSgXPe_Wq3rRuK2oqRnvHoLcR28K68S0NtJMh8ogSEIDzcxCATqNXp9utC2YywWJTmhh-wHg0ytbiua-MNc8vTSzXhNJJNnKxzO940");'
@@ -198,10 +265,125 @@
                   <p class="text-[#7b756f] text-sm font-normal leading-normal">Medium roast, mild and nutty</p>
                 </div>
               </div>
+              <div class="flex flex-col gap-3 pb-3 rounded-xl overflow-hidden transition-transform duration-200 ease-in-out hover:scale-105 hover:shadow-xl hover:bg-[#f5eee6] cursor-pointer">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDqv38FkhOSNJXIcPD87PBPiCXPtR7kCh2I9ErMc0YdUGYV3GnsbsSwqjKYh5Gye3sp5XiAPbJcrv2yENlHViGyOQTEUZhFON9ECE2O1Mlz_BFWBCrsmysYP2xCQBDh7Z5mjk4DtoTSHvQhGRxHG-do8LLWEfqdTGa9iJYQ_z7wN3wdVkmTdtYNUDLNmizS-LP_6VFvD2X6b_OaRXsJbymZ-S2UDA1ywYO_g2lxwWndDDjblfOP3LQgBARGs_vyLwUgwL7Y8bH0Kro");'
+                ></div>
+                <div>
+                  <p class="text-[#151413] text-base font-medium leading-normal">Tanzanian Peaberry</p>
+                  <p class="text-[#7b756f] text-sm font-normal leading-normal">Medium roast, bright and winey with a hint of fruit</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 pb-3 rounded-xl overflow-hidden transition-transform duration-200 ease-in-out hover:scale-105 hover:shadow-xl hover:bg-[#f5eee6] cursor-pointer">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDInoDQGFfKqVnIcf4rQRxLHl6AY4wLgiNQsH_HpIQ9xR8XnJF16MWAbuVOHy2hnbAtl95dG3Kvd2uPWWo1Bs9ZHF6pZ2ja08F-Y82wDAs-KNymku6U45rAgbyo8a1R_6trkq1wgSHaWeU1dlPAzxp4gzMc8i5qlUu8iQQfmLPM16YH5QdycF_6c8sh2ImItHAyuoh_IrK3CcFCp-580zJADiJ_sjYLd9eXQD400XivHwlTI9i44hKZoO9OVlKp5mKfqheIzEjAc-E");'
+                ></div>
+                <div>
+                  <p class="text-[#151413] text-base font-medium leading-normal">Hawaiian Kona</p>
+                  <p class="text-[#7b756f] text-sm font-normal leading-normal">Medium-light roast, smooth, sweet, and floral</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 pb-3 rounded-xl overflow-hidden transition-transform duration-200 ease-in-out hover:scale-105 hover:shadow-xl hover:bg-[#f5eee6] cursor-pointer">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDCPR3RiOaJe_631fjlvkHgA-nT0ciydJYYgbvd60fqZ8DBDVvM0rCoLNNu3-yzSco3DnwCsg5RJ6oFDx-X6EEwxgDBfpqpcVPycZ-QtYO0KVc14e7zbudJGYJas85kCb0RgVimpY9BrHZNMQwBvSNOXMm1RkFlsq0jIA9RK1ABFL2V7HHji8NxAdyK4kn3AFi5q2X8mqomp245YSsme3RKPb0Ysx6QJFC9bGEfo0m2n_GbfhNo-szjnAYooZUpJRiK54VZSEXE-C4");'
+                ></div>
+                <div>
+                  <p class="text-[#151413] text-base font-medium leading-normal">Jamaican Blue Mountain</p>
+                  <p class="text-[#7b756f] text-sm font-normal leading-normal">Mild roast, smooth, sweet, and nutty with floral notes</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 pb-3 rounded-xl overflow-hidden transition-transform duration-200 ease-in-out hover:scale-105 hover:shadow-xl hover:bg-[#f5eee6] cursor-pointer">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAkYpelZWtZSUPbIHOS0-P7vL92Pe_kHLa3jucYyQ3AGa9iogbWiSqh4QGEtu8VX-hpZz6ZNMZXGn6nQ8V6TNIEstVKucNCMKnJ_ItHdegAHPeUtkSRqsLUoRdMyilPQCzmHKzgXUcjiOMf2b4PuvR1WdLZE0tPxFqWhzKsBoYmfwmGkfrKhsAzj2GlrzU60gn8REoXlBqFX_-7uDzuEdH77ouq7MeaV-tntJhf7oXHdsww3YDNzPBTMLRqjmBpZLJMsqpS0yfWjH8");'
+                ></div>
+                <div>
+                  <p class="text-[#151413] text-base font-medium leading-normal">Peruvian Chanchamayo</p>
+                  <p class="text-[#7b756f] text-sm font-normal leading-normal">Medium roast, bright acidity, nutty and chocolatey</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 pb-3 rounded-xl overflow-hidden transition-transform duration-200 ease-in-out hover:scale-105 hover:shadow-xl hover:bg-[#f5eee6] cursor-pointer">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuClHmkbEBIeuf4mV9dhiaT4OqsKBpQi2vbYhAZCyvUUJ4FF7o7JmfND-TaDcRa2zlApq2Y_P6hrWwBoWmKcFBOlfWf31FPD8IovFGjvbsP4J0vbgKkNcE6ipevHvhj7Sx_gl9yHBkiKhtMN1QII732nosg2Gyvfc7zp6k-TLcGSMQ2ZGWAWh1dkItG5RxFIAOO9I92V9Hkizlp9sbpGpoMl5t0ePOxm8LvCRyafdIrmq7G78ahmyqNOwRD3pKVQFjMuL6hJlLCLq4s");'
+                ></div>
+                <div>
+                  <p class="text-[#151413] text-base font-medium leading-normal">Indian Monsooned Malabar</p>
+                  <p class="text-[#7b756f] text-sm font-normal leading-normal">Medium-dark roast, earthy, spicy, and low acidity</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <script>
+    // Dropdown logic for filters
+    function setupDropdown(btnId, dropdownId) {
+      const btn = document.getElementById(btnId);
+      const dropdown = document.getElementById(dropdownId);
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dropdown.classList.toggle('hidden');
+        // Hide others
+        document.querySelectorAll('.filter-dropdown').forEach(el => {
+          if (el !== dropdown) el.classList.add('hidden');
+        });
+      });
+    }
+    setupDropdown('roastFilterBtn', 'roastDropdown');
+    setupDropdown('flavorFilterBtn', 'flavorDropdown');
+    setupDropdown('originFilterBtn', 'originDropdown');
+    document.addEventListener('click', () => {
+      document.getElementById('roastDropdown').classList.add('hidden');
+      document.getElementById('flavorDropdown').classList.add('hidden');
+      document.getElementById('originDropdown').classList.add('hidden');
+    });
+
+    // Filtering logic
+    const beanCards = Array.from(document.querySelectorAll('.grid > .flex.flex-col'));
+    const roastOptions = document.querySelectorAll('#roastDropdown button');
+    const flavorOptions = document.querySelectorAll('#flavorDropdown button');
+    const originOptions = document.querySelectorAll('#originDropdown button');
+    let selectedRoast = null;
+    let selectedFlavor = null;
+    let selectedOrigin = null;
+
+    function filterBeans() {
+      beanCards.forEach(card => {
+        const name = card.querySelector('p.text-base').textContent.toLowerCase();
+        const desc = card.querySelector('p.text-sm').textContent.toLowerCase();
+        let show = true;
+        if (selectedRoast && !desc.includes(selectedRoast)) show = false;
+        if (selectedFlavor && !desc.includes(selectedFlavor)) show = false;
+        if (selectedOrigin && !desc.includes(selectedOrigin)) show = false;
+        card.style.display = show ? '' : 'none';
+      });
+    }
+    roastOptions.forEach(btn => {
+      btn.addEventListener('click', () => {
+        selectedRoast = btn.textContent.trim().toLowerCase();
+        filterBeans();
+        document.getElementById('roastDropdown').classList.add('hidden');
+      });
+    });
+    flavorOptions.forEach(btn => {
+      btn.addEventListener('click', () => {
+        selectedFlavor = btn.textContent.trim().toLowerCase();
+        filterBeans();
+        document.getElementById('flavorDropdown').classList.add('hidden');
+      });
+    });
+    originOptions.forEach(btn => {
+      btn.addEventListener('click', () => {
+        selectedOrigin = btn.textContent.trim().toLowerCase();
+        filterBeans();
+        document.getElementById('originDropdown').classList.add('hidden');
+      });
+    });
+    </script>
   </body>
 </html>

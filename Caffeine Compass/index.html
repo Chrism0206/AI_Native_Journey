@@ -29,38 +29,15 @@
           </div>
           <div class="flex flex-1 justify-end gap-8">
             <div class="flex items-center gap-9">
-              <a class="text-[#191410] text-sm font-medium leading-normal" href="#" id="homeLink">Home</a>
-              <a class="text-[#191410] text-sm font-medium leading-normal cursor-pointer hidden" id="recommendationsLink">Recommendations</a>
-              <a class="text-[#191410] text-sm font-medium leading-normal" href="#">About</a>
-              <a class="text-[#191410] text-sm font-medium leading-normal" href="bean-index.html">Bean Index</a>
-            </div>
-            <div class="flex gap-2">
-              <button
-                class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 bg-[#f1ede9] text-[#191410] gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5"
-              >
-                <div class="text-[#191410]" data-icon="MagnifyingGlass" data-size="20px" data-weight="regular">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
-                    <path
-                      d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
-                    ></path>
-                  </svg>
-                </div>
-              </button>
-              <button
-                class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 bg-[#f1ede9] text-[#191410] gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5"
-              >
-                <div class="text-[#191410]" data-icon="User" data-size="20px" data-weight="regular">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
-                    <path
-                      d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"
-                    ></path>
-                  </svg>
-                </div>
-              </button>
+              <a class="text-[#191410] text-sm font-medium leading-normal px-4 py-2 rounded-full bg-[#f1ede9] hover:bg-[#e8e0d8] transition-colors" href="index.html">Home</a>
+              <a class="text-[#191410] text-sm font-medium leading-normal px-4 py-2 rounded-full bg-[#f1ede9] hover:bg-[#e8e0d8] transition-colors" href="recommendations.html">Recommendations</a>
+              <a class="text-[#191410] text-sm font-medium leading-normal px-4 py-2 rounded-full bg-[#f1ede9] hover:bg-[#e8e0d8] transition-colors" href="bean-index.html">Beans</a>
+              <a class="text-[#191410] text-sm font-medium leading-normal px-4 py-2 rounded-full bg-[#f1ede9] hover:bg-[#e8e0d8] transition-colors" href="brewing-guide.html">Brewing Guides</a>
+              <a class="text-[#191410] text-sm font-medium leading-normal px-4 py-2 rounded-full bg-[#f1ede9] hover:bg-[#e8e0d8] transition-colors" href="about.html">About</a>
             </div>
             <a href="userprofile.html">
               <div
-                class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+                class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 ml-4"
                 style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBxnVSxfNlCxBxLQ3NYy-_3vnXRHZgqjwq0624tyAcqzCHxlUQQGlF_GazseABcsqyggSu9A9_KEfcSYaSKNwnEtIrsceTqsLwkR4-wF5F25nm8RiPz6W0hBh4Dn0B7NQh74cugFPEMuULr0E40wDg5TYh6WfVqgSO-A85ASe_csY2eIB3LTjzraCbBYh1HQeCC6V5O0bNnjQ2ytRrqrQOL63BXaNbFOax874oCIP4udyshJRRiRF63auQG62sqCq_ANb5hJHbDyKM");'
               ></div>
             </a>
@@ -204,6 +181,11 @@
                           <option value="kenya">Kenya</option>
                           <option value="sumatra">Sumatra</option>
                           <option value="jamaica">Jamaica</option>
+                          <option value="dominican-republic">Dominican Republic</option>
+                          <option value="haiti">Haiti</option>
+                          <option value="puerto-rico">Puerto Rico</option>
+                          <option value="peru">Peru</option>
+                          <option value="honduras">Honduras</option>
                         </select>
                       </div>
 
@@ -263,6 +245,7 @@
               <div class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
                 <a class="text-[#8c6f5a] text-base font-normal leading-normal min-w-40" href="#">Privacy Policy</a>
                 <a class="text-[#8c6f5a] text-base font-normal leading-normal min-w-40" href="#">Terms of Service</a>
+                <a class="text-[#8c6f5a] text-base font-normal leading-normal min-w-40" href="brewing-guide.html">Brewing Guides</a>
               </div>
               <p class="text-[#8c6f5a] text-base font-normal leading-normal">@2025 Caffeine Compass. All rights reserved.</p>
             </footer>
@@ -312,6 +295,99 @@
       </div>
     </div>
 
+    <!-- Coffee-Themed Live Background -->
+    <div id="tsparticles" style="position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:-1;"></div>
+    <!-- Animated Steam SVG -->
+    <svg id="coffee-steam" style="position:fixed;bottom:0;left:50%;transform:translateX(-50%);z-index:-1;pointer-events:none;" width="200" height="160" viewBox="0 0 200 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path class="steam1" d="M60,140 Q80,100 100,140 T140,140" stroke="#e5d6c2" stroke-width="6" fill="none"/>
+      <path class="steam2" d="M100,160 Q120,120 140,160 T180,160" stroke="#e5d6c2" stroke-width="4" fill="none"/>
+    </svg>
+
 </body>
 <script type="module" src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@3.3.0/tsparticles.bundle.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Floating coffee beans using tsParticles
+  const beanImage = new Image();
+  beanImage.src = 'images/bean.png';
+  beanImage.onload = function() {
+    // Use image if it loads
+    tsParticles.load("tsparticles", {
+      particles: {
+        number: { value: 18 },
+        color: { value: "#7b4f28" },
+        shape: {
+          type: "image",
+          image: [{ src: "images/bean.png", width: 24, height: 24 }]
+        },
+        opacity: { value: 0.7 },
+        size: { value: 18, random: { enable: true, minimumValue: 12 } },
+        move: { enable: true, speed: 0.7, direction: "top", outModes: { default: "out" } }
+      },
+      background: { color: "transparent" },
+      detectRetina: true,
+      fullScreen: { enable: false }
+    });
+  };
+  beanImage.onerror = function() {
+    // Fallback to brown circles if image fails
+    tsParticles.load("tsparticles", {
+      particles: {
+        number: { value: 18 },
+        color: { value: "#7b4f28" },
+        shape: { type: "circle" },
+        opacity: { value: 0.7 },
+        size: { value: 18, random: { enable: true, minimumValue: 12 } },
+        move: { enable: true, speed: 0.7, direction: "top", outModes: { default: "out" } }
+      },
+      background: { color: "transparent" },
+      detectRetina: true,
+      fullScreen: { enable: false }
+    });
+  };
+
+  // Animated steam
+  function animateSteam() {
+    const steam1 = document.querySelector('.steam1');
+    const steam2 = document.querySelector('.steam2');
+    if (!steam1 || !steam2) return;
+    let t = 0;
+    function frame() {
+      t += 0.02;
+      steam1.setAttribute('d', `M60,140 Q80,${100+10*Math.sin(t)} 100,140 T140,140`);
+      steam2.setAttribute('d', `M100,160 Q120,${120+8*Math.cos(t/1.5)} 140,160 T180,160`);
+      requestAnimationFrame(frame);
+    }
+    frame();
+  }
+  animateSteam();
+});
+</script>
+<style>
+  .nav-bubble {
+    min-width: 110px;
+    text-align: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    background: #f1ede9;
+    color: #191410;
+    font-size: 1rem;
+    font-weight: 500;
+    box-shadow: 0 2px 12px 0 rgba(91,55,27,0.08);
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+    cursor: pointer;
+    z-index: 40;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    margin: 0.25rem 0;
+    display: inline-block;
+  }
+  .nav-bubble:hover {
+    background: #e8e0d8;
+    color: #5b371b;
+    transform: scale(1.08);
+  }
+</style>
 </html> 

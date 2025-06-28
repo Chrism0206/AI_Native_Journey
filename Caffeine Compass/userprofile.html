@@ -20,81 +20,88 @@
           </a>
           <div class="flex flex-1 justify-end gap-8">
             <div class="flex items-center gap-9">
-              <a class="text-[#191410] text-sm font-medium leading-normal" href="index.html">Home</a>
-              <a class="text-[#191410] text-sm font-medium leading-normal" href="recommendations.html">Recommendations</a>
-              <a class="text-[#191410] text-sm font-medium leading-normal" href="bean-index.html">Beans</a>
-              <a class="text-[#191410] text-sm font-medium leading-normal" href="#">Brewing Guides</a>
+              <a class="text-[#191410] text-sm font-medium leading-normal px-4 py-2 rounded-full bg-[#f1ede9] hover:bg-[#e8e0d8] transition-colors" href="index.html">Home</a>
+              <a class="text-[#191410] text-sm font-medium leading-normal px-4 py-2 rounded-full bg-[#f1ede9] hover:bg-[#e8e0d8] transition-colors" href="recommendations.html">Recommendations</a>
+              <a class="text-[#191410] text-sm font-medium leading-normal px-4 py-2 rounded-full bg-[#f1ede9] hover:bg-[#e8e0d8] transition-colors" href="bean-index.html">Beans</a>
+              <a class="text-[#191410] text-sm font-medium leading-normal px-4 py-2 rounded-full bg-[#f1ede9] hover:bg-[#e8e0d8] transition-colors" href="brewing-guide.html">Brewing Guides</a>
+              <a class="text-[#191410] text-sm font-medium leading-normal px-4 py-2 rounded-full bg-[#f1ede9] hover:bg-[#e8e0d8] transition-colors" href="about.html">About</a>
             </div>
           </div>
         </header>
         <main class="flex flex-1 flex-col items-center justify-center py-12 px-4">
-          <div class="bg-white rounded-xl shadow-lg p-10 flex flex-col items-center max-w-lg w-full">
-            <div id="avatarSection" class="relative mb-6">
-              <div id="avatarImage" class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-32 cursor-pointer border-4 border-[#f1ede9]" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBxnVSxfNlCxBxLQ3NYy-_3vnXRHZgqjwq0624tyAcqzCHxlUQQGlF_GazseABcsqyggSu9A9_KEfcSYaSKNwnEtIrsceTqsLwkR4-wF5F25nm8RiPz6W0hBh4Dn0B7NQh74cugFPEMuULr0E40wDg5TYh6WfVqgSO-A85ASe_csY2eIB3LTjzraCbBYh1HQeCC6V5O0bNnjQ2ytRrqrQOL63BXaNbFOax874oCIP4udyshJRRiRF63auQG62sqCq_ANb5hJHbDyKM");'></div>
-              <button id="editAvatarBtn" class="absolute bottom-2 right-2 bg-[#5b371b] text-white rounded-full p-2 shadow hover:bg-[#4a2e15]" title="Change Avatar">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="M16.98 3.02a3.5 3.5 0 0 1 4.95 4.95l-1.13 1.13-4.95-4.95 1.13-1.13ZM14.85 5.15l4.95 4.95-10.6 10.6a2 2 0 0 1-.71.44l-4.07 1.36a.5.5 0 0 1-.63-.63l1.36-4.07a2 2 0 0 1 .44-.71l10.6-10.6Z"/></svg>
-              </button>
-            </div>
-            <input type="file" id="avatarUpload" class="hidden" accept="image/*" />
-            <h1 id="profileName" class="text-2xl font-bold text-[#191410] mb-2">Your Name</h1>
-            <input id="editName" class="hidden text-xl font-bold text-[#191410] mb-2 text-center border-b border-[#f1ede9] bg-[#fbfaf9]" type="text" value="Your Name" />
-            <p id="profileBadge" class="text-[#5b371b] font-semibold mb-2"></p>
-            <p id="profileRole" class="text-[#8c6f5a] mb-4">Coffee Enthusiast</p>
-            <div class="w-full flex flex-col gap-2 mb-6">
-              <div class="flex justify-between items-center">
-                <span class="text-[#191410] font-medium">Favorite Bean:</span>
-                <span id="favoriteBeanDisplay" class="text-[#8c6f5a]">Colombian Supremo</span>
-                <select id="favoriteBeanEdit" class="hidden border border-[#f1ede9] rounded-lg p-1 text-[#191410] bg-white"></select>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl">
+            <!-- Profile Card -->
+            <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col items-center">
+              <div id="avatarSection" class="relative mb-4">
+                <div id="avatarImage" class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-32 cursor-pointer border-4 border-[#f1ede9]" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBxnVSxfNlCxBxLQ3NYy-_3vnXRHZgqjwq0624tyAcqzCHxlUQQGlF_GazseABcsqyggSu9A9_KEfcSYaSKNwnEtIrsceTqsLwkR4-wF5F25nm8RiPz6W0hBh4Dn0B7NQh74cugFPEMuULr0E40wDg5TYh6WfVqgSO-A85ASe_csY2eIB3LTjzraCbBYh1HQeCC6V5O0bNnjQ2ytRrqrQOL63BXaNbFOax874oCIP4udyshJRRiRF63auQG62sqCq_ANb5hJHbDyKM");'></div>
+                <button id="editAvatarBtn" class="absolute bottom-2 right-2 bg-[#5b371b] text-white rounded-full p-2 shadow hover:bg-[#4a2e15]" title="Change Avatar">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="M16.98 3.02a3.5 3.5 0 0 1 4.95 4.95l-1.13 1.13-4.95-4.95 1.13-1.13ZM14.85 5.15l4.95 4.95-10.6 10.6a2 2 0 0 1-.71.44l-4.07 1.36a.5.5 0 0 1-.63-.63l1.36-4.07a2 2 0 0 1 .44-.71l10.6-10.6Z"/></svg>
+                </button>
               </div>
-              <div class="flex justify-between items-center">
-                <span class="text-[#191410] font-medium">Preferred Roast:</span>
-                <span id="preferredRoastDisplay" class="text-[#8c6f5a]">Medium</span>
-                <div id="preferredRoastEdit" class="hidden flex gap-2">
-                  <label><input type="radio" name="roast" value="Light" class="mr-1" />Light</label>
-                  <label><input type="radio" name="roast" value="Medium" class="mr-1" />Medium</label>
-                  <label><input type="radio" name="roast" value="Dark" class="mr-1" />Dark</label>
+              <input type="file" id="avatarUpload" class="hidden" accept="image/*" />
+              <h1 id="profileName" class="text-2xl font-bold text-[#191410] mb-1">Your Name</h1>
+              <input id="editName" class="hidden text-xl font-bold text-[#191410] mb-1 text-center border-b border-[#f1ede9] bg-[#fbfaf9]" type="text" value="Your Name" />
+              <p id="profileBadge" class="text-[#5b371b] font-semibold mb-1"></p>
+              <p id="profileRole" class="text-[#8c6f5a] mb-2">Coffee Enthusiast</p>
+              <div class="flex gap-3 w-full justify-center mt-2">
+                <button id="editProfileBtn" class="px-6 py-2 rounded-full bg-[#5b371b] text-[#fbfaf9] font-medium hover:bg-[#4a2e15] transition-colors">Edit Profile</button>
+                <button id="saveProfileBtn" class="hidden px-6 py-2 rounded-full bg-[#00704A] text-[#fbfaf9] font-medium hover:bg-[#005C38] transition-colors">Save Changes</button>
+                <button id="cancelProfileBtn" class="hidden px-6 py-2 rounded-full bg-[#f1ede9] text-[#191410] font-medium hover:bg-[#e8e0d8] transition-colors">Cancel</button>
+              </div>
+            </div>
+            <!-- Stats & Preferences Card -->
+            <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col gap-4 justify-center">
+              <div class="grid grid-cols-1 gap-3">
+                <div class="flex justify-between items-center">
+                  <span class="text-[#191410] font-medium">Favorite Bean:</span>
+                  <span id="favoriteBeanDisplay" class="text-[#8c6f5a]">Colombian Supremo</span>
+                  <select id="favoriteBeanEdit" class="hidden border border-[#f1ede9] rounded-lg p-1 text-[#191410] bg-white"></select>
+                </div>
+                <div class="flex justify-between items-center">
+                  <span class="text-[#191410] font-medium">Preferred Roast:</span>
+                  <span id="preferredRoastDisplay" class="text-[#8c6f5a]">Medium</span>
+                  <div id="preferredRoastEdit" class="hidden flex gap-2">
+                    <label><input type="radio" name="roast" value="Light" class="mr-1" />Light</label>
+                    <label><input type="radio" name="roast" value="Medium" class="mr-1" />Medium</label>
+                    <label><input type="radio" name="roast" value="Dark" class="mr-1" />Dark</label>
+                  </div>
+                </div>
+                <div class="flex justify-between items-center">
+                  <span class="text-[#191410] font-medium">Flavor Profile:</span>
+                  <span id="flavorProfileDisplay" class="text-[#8c6f5a]">Nutty, Chocolate</span>
+                  <div id="flavorProfileEdit" class="hidden flex gap-2 flex-wrap">
+                    <label><input type="checkbox" value="Fruity" class="mr-1" />Fruity</label>
+                    <label><input type="checkbox" value="Chocolate" class="mr-1" />Chocolate</label>
+                    <label><input type="checkbox" value="Nutty" class="mr-1" />Nutty</label>
+                    <label><input type="checkbox" value="Caramel" class="mr-1" />Caramel</label>
+                    <label><input type="checkbox" value="Floral" class="mr-1" />Floral</label>
+                    <label><input type="checkbox" value="Spicy" class="mr-1" />Spicy</label>
+                    <label><input type="checkbox" value="Earthy" class="mr-1" />Earthy</label>
+                    <label><input type="checkbox" value="Citrus" class="mr-1" />Citrus</label>
+                  </div>
+                </div>
+                <div class="flex justify-between items-center">
+                  <span class="text-[#191410] font-medium">Member Since:</span>
+                  <span id="memberSinceDisplay" class="text-[#8c6f5a]">2024-01-01</span>
+                  <input id="memberSinceEdit" type="date" class="hidden border border-[#f1ede9] rounded-lg p-1 text-[#191410] bg-white" />
+                </div>
+                <div class="flex justify-between items-center mb-1">
+                  <span class="text-[#191410] font-medium">Beans Explored:</span>
+                  <span id="beansExploredCount" class="text-[#8c6f5a]">0</span>
+                </div>
+                <div class="w-full bg-[#f1ede9] rounded-full h-2">
+                  <div id="beansExploredBar" class="bg-[#5b371b] h-2 rounded-full transition-all duration-300" style="width: 0%"></div>
                 </div>
               </div>
-              <div class="flex justify-between items-center">
-                <span class="text-[#191410] font-medium">Flavor Profile:</span>
-                <span id="flavorProfileDisplay" class="text-[#8c6f5a]">Nutty, Chocolate</span>
-                <div id="flavorProfileEdit" class="hidden flex gap-2 flex-wrap">
-                  <label><input type="checkbox" value="Fruity" class="mr-1" />Fruity</label>
-                  <label><input type="checkbox" value="Chocolate" class="mr-1" />Chocolate</label>
-                  <label><input type="checkbox" value="Nutty" class="mr-1" />Nutty</label>
-                  <label><input type="checkbox" value="Caramel" class="mr-1" />Caramel</label>
-                  <label><input type="checkbox" value="Floral" class="mr-1" />Floral</label>
-                  <label><input type="checkbox" value="Spicy" class="mr-1" />Spicy</label>
-                  <label><input type="checkbox" value="Earthy" class="mr-1" />Earthy</label>
-                  <label><input type="checkbox" value="Citrus" class="mr-1" />Citrus</label>
-                </div>
-              </div>
-              <div class="flex justify-between items-center">
-                <span class="text-[#191410] font-medium">Member Since:</span>
-                <span id="memberSinceDisplay" class="text-[#8c6f5a]">2024-01-01</span>
-                <input id="memberSinceEdit" type="date" class="hidden border border-[#f1ede9] rounded-lg p-1 text-[#191410] bg-white" />
-              </div>
             </div>
-            <div class="w-full mb-4">
-              <div class="flex justify-between items-center mb-1">
-                <span class="text-[#191410] font-medium">Beans Explored:</span>
-                <span id="beansExploredCount" class="text-[#8c6f5a]">0</span>
-              </div>
-              <div class="w-full bg-[#f1ede9] rounded-full h-2">
-                <div id="beansExploredBar" class="bg-[#5b371b] h-2 rounded-full transition-all duration-300" style="width: 0%"></div>
-              </div>
+            <!-- Saved Recommendations Card -->
+            <div class="md:col-span-2 bg-[#f1ede9] rounded-xl shadow p-6 flex flex-col items-center mt-2">
+              <a href="favorites.html" class="inline-block px-6 py-2 rounded-full bg-[#5b371b] text-[#fbfaf9] font-medium hover:bg-[#4a2e15] transition-colors">My Saved Recommendations</a>
             </div>
-            <div class="flex gap-3 w-full justify-center mb-4">
-              <button id="editProfileBtn" class="px-6 py-2 rounded-full bg-[#5b371b] text-[#fbfaf9] font-medium hover:bg-[#4a2e15] transition-colors">Edit Profile</button>
-              <button id="saveProfileBtn" class="hidden px-6 py-2 rounded-full bg-[#00704A] text-[#fbfaf9] font-medium hover:bg-[#005C38] transition-colors">Save Changes</button>
-              <button id="cancelProfileBtn" class="hidden px-6 py-2 rounded-full bg-[#f1ede9] text-[#191410] font-medium hover:bg-[#e8e0d8] transition-colors">Cancel</button>
-            </div>
-            <a href="favorites.html" class="inline-block px-6 py-2 rounded-full bg-[#f1ede9] text-[#5b371b] font-medium hover:bg-[#e8e0d8] transition-colors">My Saved Recommendations</a>
           </div>
         </main>
       </div>
     </div>
     <script type="module" src="userprofile.js"></script>
 </body>
-</html> 
 </html> 
