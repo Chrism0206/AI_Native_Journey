@@ -172,4 +172,54 @@ avatarUpload.addEventListener('change', (e) => {
 
 // --- Initial Render ---
 setEditMode(false);
-renderProfile(); 
+renderProfile();
+
+// --- Saved Recommendations Section ---
+function getFavorites() {
+  return JSON.parse(localStorage.getItem('favorites') || '[]');
+}
+
+function setFavorites(favs) {
+  localStorage.setItem('favorites', JSON.stringify(favs));
+}
+
+function renderSavedRecommendations() {
+  const container = document.getElementById('savedRecommendationsList');
+  if (!container) return;
+  const favIds = getFavorites();
+  // Remove debug output
+  container.innerHTML = '';
+
+  // If no favorites, add some sample ones and re-render
+  if (favIds.length === 0 && Array.isArray(coffeeDatabase) && coffeeDatabase.length > 0) {
+    const sampleIds = coffeeDatabase.slice(0, 3).map(c => c.id);
+    setFavorites(sampleIds);
+    setTimeout(renderSavedRecommendations, 500); // Let localStorage update
+    return;
+  }
+
+  const favCoffees = coffeeDatabase.filter(c => favIds.includes(c.id));
+  if (favCoffees.length === 0) {
+    container.innerHTML += `<div class='text-center text-[#8c6f5a] col-span-full'>No saved recommendations yet. Add some from the recommendations page!</div>`;
+    return;
+  }
+  favCoffees.forEach(coffee => {
+    const card = document.createElement('div');
+    card.className = 'flex flex-col items-center bg-white rounded-xl shadow p-4 gap-3';
+    card.innerHTML = `
+      <img src="${coffee.image}" alt="${coffee.name}" class="rounded-lg w-full max-w-[120px] aspect-square object-cover mb-2 shadow" />
+      <div class="text-center">
+        <div class="text-[#191410] font-bold text-base mb-1">${coffee.name}</div>
+        <div class="flex items-center gap-1 justify-center text-[#f6ad55] text-sm mb-2">
+          <span>${'★'.repeat(Math.floor(coffee.rating))}${'☆'.repeat(5 - Math.floor(coffee.rating))}</span>
+          <span class="text-[#191410]">${coffee.rating}/5</span>
+        </div>
+        <a href="shop.html?buy=${encodeURIComponent(coffee.id)}" class="inline-block mt-1 px-4 py-2 rounded-full bg-[#5b371b] text-[#fbfaf9] font-medium hover:bg-[#4a2e15] transition-colors">Buy Now</a>
+      </div>
+    `;
+    container.appendChild(card);
+  });
+}
+
+// Render on load
+renderSavedRecommendations(); 

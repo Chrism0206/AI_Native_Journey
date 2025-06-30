@@ -32,15 +32,20 @@
               <a class="text-[#191410] text-sm font-medium leading-normal px-4 py-2 rounded-full bg-[#f1ede9] hover:bg-[#e8e0d8] transition-colors" href="index.html">Home</a>
               <a class="text-[#191410] text-sm font-medium leading-normal px-4 py-2 rounded-full bg-[#f1ede9] hover:bg-[#e8e0d8] transition-colors" href="recommendations.html">Recommendations</a>
               <a class="text-[#191410] text-sm font-medium leading-normal px-4 py-2 rounded-full bg-[#f1ede9] hover:bg-[#e8e0d8] transition-colors" href="bean-index.html">Beans</a>
+              <a class="text-[#191410] text-sm font-medium leading-normal px-4 py-2 rounded-full bg-[#f1ede9] hover:bg-[#e8e0d8] transition-colors" href="shop.html">Shop</a>
               <a class="text-[#191410] text-sm font-medium leading-normal px-4 py-2 rounded-full bg-[#f1ede9] hover:bg-[#e8e0d8] transition-colors" href="brewing-guide.html">Brewing Guides</a>
               <a class="text-[#191410] text-sm font-medium leading-normal px-4 py-2 rounded-full bg-[#f1ede9] hover:bg-[#e8e0d8] transition-colors" href="about.html">About</a>
             </div>
-            <a href="userprofile.html">
-              <div
-                class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 ml-4"
-                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBxnVSxfNlCxBxLQ3NYy-_3vnXRHZgqjwq0624tyAcqzCHxlUQQGlF_GazseABcsqyggSu9A9_KEfcSYaSKNwnEtIrsceTqsLwkR4-wF5F25nm8RiPz6W0hBh4Dn0B7NQh74cugFPEMuULr0E40wDg5TYh6WfVqgSO-A85ASe_csY2eIB3LTjzraCbBYh1HQeCC6V5O0bNnjQ2ytRrqrQOL63BXaNbFOax874oCIP4udyshJRRiRF63auQG62sqCq_ANb5hJHbDyKM");'
-              ></div>
-            </a>
+            <div class="flex items-center gap-4">
+              <button id="cartButton" class="relative p-2 text-[#191410] hover:text-[#5b371b] transition-colors">
+                <i class="fas fa-shopping-cart text-xl"></i>
+                <span id="cartBadge" class="absolute -top-1 -right-1 bg-[#5b371b] text-[#fbfaf9] text-xs rounded-full h-5 w-5 flex items-center justify-center font-bold">0</span>
+              </button>
+              <a href="userprofile.html">
+                <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 ml-4"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBxnVSxfNlCxBxLQ3NYy-_3vnXRHZgqjwq0624tyAcqzCHxlUQQGlF_GazseABcsqyggSu9A9_KEfcSYaSKNwnEtIrsceTqsLwkR4-wF5F25nm8RiPz6W0hBh4Dn0B7NQh74cugFPEMuULr0E40wDg5TYh6WfVqgSO-A85ASe_csY2eIB3LTjzraCbBYh1HQeCC6V5O0bNnjQ2ytRrqrQOL63BXaNbFOax874oCIP4udyshJRRiRF63auQG62sqCq_ANb5hJHbDyKM");'></div>
+              </a>
+            </div>
           </div>
         </header>
         
@@ -303,67 +308,42 @@
       <path class="steam2" d="M100,160 Q120,120 140,160 T180,160" stroke="#e5d6c2" stroke-width="4" fill="none"/>
     </svg>
 
+    <!-- Shopping Cart Modal (copied from shop.html for consistency) -->
+    <div id="cartModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50">
+      <div class="flex items-center justify-center min-h-screen p-4">
+        <div class="bg-white rounded-xl shadow-xl max-w-2xl w-full max-h-[80vh] overflow-hidden">
+          <div class="flex items-center justify-between p-6 border-b border-[#f1ede9]">
+            <h2 class="text-2xl font-bold text-[#191410]">Shopping Cart</h2>
+            <button id="closeCart" class="text-[#8c6f5a] hover:text-[#191410] text-2xl">&times;</button>
+          </div>
+          
+          <div class="p-6 overflow-y-auto max-h-[400px]">
+            <div id="cartItems">
+              <!-- Cart items will be displayed here -->
+            </div>
+            
+            <div id="emptyCart" class="text-center py-8 text-[#8c6f5a]">
+              <i class="fas fa-shopping-cart text-4xl mb-4"></i>
+              <p>Your cart is empty</p>
+            </div>
+          </div>
+          
+          <div class="p-6 border-t border-[#f1ede9] bg-[#fbfaf9]">
+            <div class="flex justify-between items-center mb-4">
+              <span class="text-lg font-semibold text-[#191410]">Total:</span>
+              <span id="cartTotal" class="text-2xl font-bold text-[#5b371b]">$0.00</span>
+            </div>
+            <button id="checkoutBtn" class="w-full py-3 bg-[#5b371b] text-[#fbfaf9] rounded-lg hover:bg-[#4a2e15] transition-colors font-medium">
+              Proceed to Checkout
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="shop.js"></script>
 </body>
 <script type="module" src="script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.3.0/tsparticles.bundle.min.js"></script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  // Floating coffee beans using tsParticles
-  const beanImage = new Image();
-  beanImage.src = 'images/bean.png';
-  beanImage.onload = function() {
-    // Use image if it loads
-    tsParticles.load("tsparticles", {
-      particles: {
-        number: { value: 18 },
-        color: { value: "#7b4f28" },
-        shape: {
-          type: "image",
-          image: [{ src: "images/bean.png", width: 24, height: 24 }]
-        },
-        opacity: { value: 0.7 },
-        size: { value: 18, random: { enable: true, minimumValue: 12 } },
-        move: { enable: true, speed: 0.7, direction: "top", outModes: { default: "out" } }
-      },
-      background: { color: "transparent" },
-      detectRetina: true,
-      fullScreen: { enable: false }
-    });
-  };
-  beanImage.onerror = function() {
-    // Fallback to brown circles if image fails
-    tsParticles.load("tsparticles", {
-      particles: {
-        number: { value: 18 },
-        color: { value: "#7b4f28" },
-        shape: { type: "circle" },
-        opacity: { value: 0.7 },
-        size: { value: 18, random: { enable: true, minimumValue: 12 } },
-        move: { enable: true, speed: 0.7, direction: "top", outModes: { default: "out" } }
-      },
-      background: { color: "transparent" },
-      detectRetina: true,
-      fullScreen: { enable: false }
-    });
-  };
-
-  // Animated steam
-  function animateSteam() {
-    const steam1 = document.querySelector('.steam1');
-    const steam2 = document.querySelector('.steam2');
-    if (!steam1 || !steam2) return;
-    let t = 0;
-    function frame() {
-      t += 0.02;
-      steam1.setAttribute('d', `M60,140 Q80,${100+10*Math.sin(t)} 100,140 T140,140`);
-      steam2.setAttribute('d', `M100,160 Q120,${120+8*Math.cos(t/1.5)} 140,160 T180,160`);
-      requestAnimationFrame(frame);
-    }
-    frame();
-  }
-  animateSteam();
-});
-</script>
 <style>
   .nav-bubble {
     min-width: 110px;

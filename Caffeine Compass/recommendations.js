@@ -70,9 +70,14 @@ function renderRecommendations(recommendations) {
                         <span class="text-[#191410]">${coffee.rating}/5</span>
                     </div>
                 </div>
-                <a href="details.html?id=${coffee.id}" class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 flex-row-reverse bg-[#f1ede9] text-[#191410] text-sm font-medium leading-normal w-fit hover:bg-[#e8e0d8] transition-colors">
-                    <span class="truncate">View Details</span>
-                </a>
+                <div class="flex flex-col gap-2">
+                    <a href="details.html?id=${coffee.id}" class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 flex-row-reverse bg-[#f1ede9] text-[#191410] text-sm font-medium leading-normal w-fit hover:bg-[#e8e0d8] transition-colors">
+                        <span class="truncate">View Details</span>
+                    </a>
+                    <a href="shop.html?search=${encodeURIComponent(coffee.name)}" class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 flex-row-reverse bg-[#00704A] text-[#fbfaf9] text-sm font-medium leading-normal w-fit hover:bg-[#005C38] transition-colors">
+                        <span class="truncate">Buy Now</span>
+                    </a>
+                </div>
             </div>
             <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex-1" style='background-image: url("${coffee.image}");'></div>
         `;

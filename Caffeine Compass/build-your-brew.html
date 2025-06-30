@@ -12,21 +12,31 @@
     <div class="relative flex size-full min-h-screen flex-col bg-[#fbfaf9] group/design-root overflow-x-hidden">
       <div class="layout-container flex h-full grow flex-col">
         <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f1ede9] px-10 py-3">
-          <a href="index.html" class="flex items-center gap-4 text-[#191410]">
-            <img src="images/bean.png" alt="Caffeine Compass Logo" class="w-9 h-9 object-contain" />
-            <h2 class="text-[#191410] text-lg font-bold leading-tight tracking-[-0.015em]">Caffeine Compass</h2>
-          </a>
+          <div class="flex items-center gap-4 text-[#191410]">
+            <a href="index.html" class="flex items-center gap-4 text-[#191410]">
+              <img src="images/bean.png" alt="Caffeine Compass Logo" class="w-9 h-9 object-contain" />
+              <h2 class="text-[#191410] text-lg font-bold leading-tight tracking-[-0.015em]">Caffeine Compass</h2>
+            </a>
+          </div>
           <div class="flex flex-1 justify-end gap-8">
             <div class="flex items-center gap-9">
               <a class="text-[#191410] text-sm font-medium leading-normal px-4 py-2 rounded-full bg-[#f1ede9] hover:bg-[#e8e0d8] transition-colors" href="index.html">Home</a>
               <a class="text-[#191410] text-sm font-medium leading-normal px-4 py-2 rounded-full bg-[#f1ede9] hover:bg-[#e8e0d8] transition-colors" href="recommendations.html">Recommendations</a>
               <a class="text-[#191410] text-sm font-medium leading-normal px-4 py-2 rounded-full bg-[#f1ede9] hover:bg-[#e8e0d8] transition-colors" href="bean-index.html">Beans</a>
+              <a class="text-[#191410] text-sm font-medium leading-normal px-4 py-2 rounded-full bg-[#f1ede9] hover:bg-[#e8e0d8] transition-colors" href="shop.html">Shop</a>
               <a class="text-[#191410] text-sm font-medium leading-normal px-4 py-2 rounded-full bg-[#f1ede9] hover:bg-[#e8e0d8] transition-colors" href="brewing-guide.html">Brewing Guides</a>
               <a class="text-[#191410] text-sm font-medium leading-normal px-4 py-2 rounded-full bg-[#f1ede9] hover:bg-[#e8e0d8] transition-colors" href="about.html">About</a>
             </div>
-            <a href="userprofile.html">
-              <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBxnVSxfNlCxBxLQ3NYy-_3vnXRHZgqjwq0624tyAcqzCHxlUQQGlF_GazseABcsqyggSu9A9_KEfcSYaSKNwnEtIrsceTqsLwkR4-wF5F25nm8RiPz6W0hBh4Dn0B7NQh74cugFPEMuULr0E40wDg5TYh6WfVqgSO-A85ASe_csY2eIB3LTjzraCbBYh1HQeCC6V5O0bNnjQ2ytRrqrQOL63BXaNbFOax874oCIP4udyshJRRiRF63auQG62sqCq_ANb5hJHbDyKM");'></div>
-            </a>
+            <div class="flex items-center gap-4">
+              <button id="cartButton" class="relative p-2 text-[#191410] hover:text-[#5b371b] transition-colors">
+                <i class="fas fa-shopping-cart text-xl"></i>
+                <span id="cartBadge" class="absolute -top-1 -right-1 bg-[#5b371b] text-[#fbfaf9] text-xs rounded-full h-5 w-5 flex items-center justify-center font-bold">0</span>
+              </button>
+              <a href="userprofile.html">
+                <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 ml-4"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBxnVSxfNlCxBxLQ3NYy-_3vnXRHZgqjwq0624tyAcqzCHxlUQQGlF_GazseABcsqyggSu9A9_KEfcSYaSKNwnEtIrsceTqsLwkR4-wF5F25nm8RiPz6W0hBh4Dn0B7NQh74cugFPEMuULr0E40wDg5TYh6WfVqgSO-A85ASe_csY2eIB3LTjzraCbBYh1HQeCC6V5O0bNnjQ2ytRrqrQOL63BXaNbFOax874oCIP4udyshJRRiRF63auQG62sqCq_ANb5hJHbDyKM");'></div>
+              </a>
+            </div>
           </div>
         </header>
         
@@ -215,6 +225,34 @@
         </div>
       </div>
     </div>
+    <!-- Cart Modal HTML (copied from shop.html) -->
+    <div id="cartModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50">
+      <div class="flex items-center justify-center min-h-screen p-4">
+        <div class="bg-white rounded-xl shadow-xl max-w-2xl w-full max-h-[80vh] overflow-hidden">
+          <div class="flex items-center justify-between p-6 border-b border-[#f1ede9]">
+            <h2 class="text-2xl font-bold text-[#191410]">Shopping Cart</h2>
+            <button id="closeCart" class="text-[#8c6f5a] hover:text-[#191410] text-2xl">&times;</button>
+          </div>
+          <div class="p-6 overflow-y-auto max-h-[400px]">
+            <div id="cartItems"></div>
+            <div id="emptyCart" class="text-center py-8 text-[#8c6f5a]">
+              <i class="fas fa-shopping-cart text-4xl mb-4"></i>
+              <p>Your cart is empty</p>
+            </div>
+          </div>
+          <div class="p-6 border-t border-[#f1ede9] bg-[#fbfaf9]">
+            <div class="flex justify-between items-center mb-4">
+              <span class="text-lg font-semibold text-[#191410]">Total:</span>
+              <span id="cartTotal" class="text-2xl font-bold text-[#5b371b]">$0.00</span>
+            </div>
+            <a href="shop.html" id="checkoutBtn" class="w-full py-3 bg-[#5b371b] text-[#fbfaf9] rounded-lg hover:bg-[#4a2e15] transition-colors font-medium text-center block">
+              Go to Shop & Checkout
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
     <script type="module" src="build-your-brew.js"></script>
+    <script type="module" src="shop.js"></script>
 </body>
 </html> 
